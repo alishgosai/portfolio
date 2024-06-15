@@ -1,15 +1,30 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+}
+
 /* Navigation Bar Styles */
 .nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  background-color: transparent;
   transition: background-color 0.5s ease;
   z-index: 1000;
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 0;
   display: flex;
@@ -24,11 +39,12 @@
 }
 
 .my-nav-logo {
-width: 80px;
+  height: 76px;
+  width: 76px;
+  object-fit: cover;
 }
 
 .nav-links {
-  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,61 +58,31 @@ width: 80px;
 }
 
 .nav-links li {
+  margin-left: 20px;
   margin-right: 20px;
 }
 
 .nav-links a {
+  font-size: 1.2em;
   color: goldenrod;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: black;
+  color: white;
+}
+
+.nav-connect {
+  display: none; /* Hide by default on larger screens */
 }
 
 .nav-toggle {
   display: none;
+  cursor: pointer;
 }
 
 /* Golden Styles */
-.nav {
-  background-color: transparent;
-}
-
-.nav-container {
-  border-bottom: 1px solid goldenrod;
-}
-
-.nav-logo {
-  color: goldenrod;
-}
-
-.nav-links a {
-  color: goldenrod;
-}
-
-.nav-links a:hover {
-  color: rgb(152, 78, 0);
-}
-
-/* Responsive Styles */
-@media only screen and (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-  .nav-links {
-    display: none;
-  }
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .nav-logo {
-    margin-bottom: 10px;
-  }
-}
-
 .nav.scrolled {
   background-color: goldenrod;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -107,5 +93,61 @@ width: 80px;
 }
 
 .nav.scrolled .nav-links a:hover {
-  color: goldenrod;
+  color: white;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-logo {
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    background-color: goldenrod;
+    position: absolute;
+    top: 60px; /* Adjust this to align with your nav height */
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  .nav-links.show ul {
+    padding: 20px;
+  }
+
+  .nav-links.show li {
+    margin: 10px 0;
+  }
+
+  .nav-links.show a {
+    color: white;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-connect {
+    display: block; /* Show on smaller screens */
+    font-size: 1.2em;
+    color: white;
+    padding: 10px;
+    border-radius: 16px;
+    background-color: goldenrod;
+    cursor: pointer;
+    margin-top: 10px; /* Adjust spacing */
+  }
 }
