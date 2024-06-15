@@ -29,3 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+// 
+// main.js
+document.addEventListener('scroll', function() {
+  const homeSection = document.querySelector('#home .cover-image');
+  const scrollPosition = window.scrollY;
+  
+  // Adjust the speed by changing the divisor value
+  homeSection.style.transform = `translateY(${scrollPosition / 5}px)`;
+});
