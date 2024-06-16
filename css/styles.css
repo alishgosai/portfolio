@@ -196,7 +196,6 @@ body {
 }
 
 /* Home section styles */
-
 #home {
   position: relative;
   width: 100vw;
@@ -229,8 +228,6 @@ body {
   position: absolute;
   display: flex;
   color: goldenrod;
-}
-#home h1 {
   font-size: 9em;
   font-family: "Syncopate", sans-serif;
   font-weight: 700;
@@ -240,7 +237,7 @@ body {
   margin-bottom: 25%;
 }
 
-#home p{
+#home p {
   color: goldenrod;
   position: absolute;
   font-size: 2em;
@@ -251,11 +248,10 @@ body {
   margin-bottom: 15%;
 }
 
-/* about section */
+/* About section */
 #about {
   position: relative;
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: flex-start;
 }
