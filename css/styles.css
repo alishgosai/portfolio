@@ -1,4 +1,16 @@
 /* Reset default margin and padding */
+.syncopate-regular {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.syncopate-bold {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +19,8 @@
 
 /* Body styles */
 body {
+  width: 100%;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   background-color: #34230e;
   color: rgb(151, 111, 18);
@@ -86,7 +100,7 @@ body {
 }
 
 .nav-connect:hover {
-  color: white;
+  color: #34230e;
   background-color: goldenrod;
 }
 
@@ -182,102 +196,66 @@ body {
 }
 
 /* Home section styles */
-/* Home Section Styles */
+
 #home {
   position: relative;
   width: 100vw;
-  height: 120vh; /* Increase height to make the image bigger */
-  overflow: hidden;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-end;
 }
 
 #home .image-container {
   position: absolute;
-  top: 0;
-  left: 0;
+  margin-bottom: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  z-index: 0; /* Ensure image is behind the text */
+  display: flex;
+  justify-content: center;
 }
 
 #home .cover-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the entire section */
-  transform: translateY(0);
-  transition: transform 0.5s ease-out;
-}
-
-#home h1, #home p {
   position: relative;
-  z-index: 1; /* Ensure text is above the image */
-  color: white;
+  object-fit: contain;
+  max-width: 100%;
+  width: 100%;
+  z-index: 1;
 }
 
 #home h1 {
-  font-size: 3em;
+  position: absolute;
+  display: flex;
+  color: goldenrod;
+}
+#home h1 {
+  font-size: 9em;
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  align-items: center;
+  margin-left: 10%;
+  margin-bottom: 25%;
 }
 
-#home p {
-  font-size: 1.5em;
+#home p{
+  color: goldenrod;
+  position: absolute;
+  font-size: 2em;
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-left: 10%;
+  margin-bottom: 15%;
 }
 
-
+/* about section */
 #about {
   position: relative;
   width: 100vw;
   height: 100vh;
-}
-
-#about .image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-#about .cover-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-#home h1, #home p, #about h1, #about p {
-  position: relative;
-  color: white; /* Change text color as needed */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add text shadow for better readability */
-}
-
-#home h1 {
-  margin-top: 20%;
-  font-size: 3em;
-}
-
-#home p {
-  margin-top: 30%;
-  font-size: 1.5em;
-}
-
-#about h1 {
-  margin-top: 20%;
-  font-size: 3em;
-  z-index: 1; /* Ensure text is above the image */
-}
-
-#about p {
-  margin-top: 30%;
-  font-size: 1.5em;
-  z-index: 1; /* Ensure text is above the image */
+  display: flex;
+  align-items: flex-start;
 }
