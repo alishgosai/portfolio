@@ -252,6 +252,12 @@ body {
 #about {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh; /* Ensure the section takes at least the height of the viewport */
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #34230e; /* Adjust as per your design */
+  background-image: url('images/about-background.jpg'); /* Adjust the path to your image */
+  background-size: cover;
+  background-position: center;
 }
