@@ -257,10 +257,61 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #34230e; /* Adjust as per your design */
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
   background-image: url("images/about-background.jpg"); /* Adjust the path to your image */
   background-size: cover;
   background-position: center;
+}/* About section */
+.section-about {
+  background-color: white; /* Adjust as per your design */
+  color: goldenrod;
+  padding: 80px 0; /* Adjust padding as needed */
+  text-align: center;
 }
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; /* Adjust the gap between boxes */
+}
+
+.about-box {
+  flex: 1 1 300px; /* Flexbox properties for responsiveness */
+  background-color: transparent; /* Darker SaddleBrown */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.about-box h2,
+.about-box h3 {
+  color: goldenrod;
+}
+
+.about-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-box ul li {
+  margin-bottom: 10px;
+}
+
+.about-box ul li a {
+  color: #daa520; /* Goldenrod */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-box ul li a:hover {
+  color: #ffd700; /* Lighter golden color for hover effect */
+}
+
+
 
 
 footer {

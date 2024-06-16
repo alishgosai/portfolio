@@ -38,7 +38,7 @@ document.addEventListener('scroll', function() {
   const scrollPosition = window.scrollY;
   
   // Adjust the speed by changing the divisor value
-  homeSection.style.transform = `translateY(${scrollPosition / 2}px)`;
+  homeSection.style.transform = `translateY(${scrollPosition / 1.5}px)`;
 });
 
 
