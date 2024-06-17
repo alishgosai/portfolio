@@ -272,6 +272,24 @@ body {
   margin-left: 10%;
   margin-bottom: 15%;
 } */
+@media only screen and (max-width: 768px) {
+  .home-title {
+    padding-bottom: 30%;
+    font-size: 18vw;
+    white-space: normal; /* Allow text to wrap */
+    line-height: 1.2; /* Adjust line height for readability */
+  
+  }
+  .cover-image {
+    object-fit: cover;
+  height: 80%;
+  max-width: 80%;
+  
+  }
+  .home-description {
+    font-size: 1em;
+  }
+}
 
 /* About section */
 #about {
@@ -289,23 +307,7 @@ body {
   z-index: 4;
 } 
 
-@media only screen and (max-width: 768px) {
-  .home-title {
-    padding-bottom: 30%;
-    font-size: 17vw;
-    white-space: normal; /* Allow text to wrap */
-    line-height: 1.2; /* Adjust line height for readability */
-  }
-  .cover-image {
-    object-fit: cover;
-  height: 80%;
-  width: 100%;
-  
-  }
-  .home-description {
-    font-size: 1em;
-  }
-}
+
 
 /* About section */
 .section-about {
