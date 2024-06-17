@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Pointer Image Follow</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background-color: #34230e; /* Set the background to black */
+        }
+
+        .container {
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1; /* Ensure h1 stays on top of the image */
+        }
+
+        h1 {
+            font-size: 3rem;
+            z-index: 2; /* Ensure h1 stays on top of the image */
+            color: white; /* Set text color to white */
+        }
+
+        #alish-image {
+          width: 10%;
+            position: absolute;
+            pointer-events: none; /* Make sure the image doesn't interfere with mouse events */
+            z-index: 0; /* Behind everything */
+            opacity: 199; /* Adjust the opacity of the image */
+            transition: left 0.1s, top 0.1s; /* Smooth transition effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+    </div>
+    <img src="../images/gif/hear (1).gif" alt="Alish Image" id="alish-image">
+    <script>
+        document.addEventListener("mousemove", function(event) {
+            var mouseX = event.pageX;
+            var mouseY = event.pageY;
+
+            var image = document.getElementById("alish-image");
+            var halfWidth = image.width / 2;
+            var halfHeight = image.height / 2;
+
+            image.style.left = (mouseX - halfWidth) + "px";
+            image.style.top = (mouseY - halfHeight) + "px";
+        });
+    </script>
+</body>
+</html>

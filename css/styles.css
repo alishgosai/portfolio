@@ -1,16 +1,4 @@
 /* Reset default margin and padding */
-.syncopate-regular {
-  font-family: "Syncopate", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.syncopate-bold {
-  font-family: "Syncopate", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +11,7 @@ body {
   overflow-x: hidden;
   font-family: Arial, sans-serif;
   background-color: #34230e;
-  color: rgb(151, 111, 18);
+  color: goldenrod;
   margin: 0;
 }
 
@@ -33,7 +21,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: #34230e;
   transition: background-color 0.5s ease;
   z-index: 1000;
 }
@@ -47,7 +35,7 @@ body {
   align-items: center;
 }
 
-.nav-logo {
+.nav-logo a {
   font-weight: bold;
   color: goldenrod;
   text-decoration: none;
@@ -85,7 +73,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #34230e;
+  color: white;
 }
 
 .nav-connect {
@@ -104,18 +92,32 @@ body {
   background-color: goldenrod;
 }
 
+/* Updated CSS for hamburger menu transformation */
 .nav-toggle {
   display: none;
   cursor: pointer;
+  font-size: 24px;
+  color: goldenrod;
 }
 
-/* Golden Styles */
+.nav-toggle.active .fa-bars {
+  display: none;
+}
+
+.nav-toggle.active .fa-times {
+  display: block;
+}
+
+
+
+/* Scrolled nav styles */
 .nav.scrolled {
   background-color: #34230e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav.scrolled .nav-links a {
-  color: white;
+  color: goldenrod;
 }
 
 .nav.scrolled .nav-links a:hover {
@@ -123,13 +125,8 @@ body {
 }
 
 .nav.scrolled .nav-connect {
-  font-size: 1.2em;
-  padding: 10px;
-  border-radius: 16px;
-  text-decoration: none;
   color: #34230e;
   background-color: goldenrod;
-  transition: color 0.5s ease;
 }
 
 .nav.scrolled .nav-connect:hover {
@@ -145,10 +142,6 @@ body {
     align-items: center;
   }
 
-  .nav-logo {
-    margin-bottom: 10px;
-  }
-
   .nav-links {
     display: none;
     width: 80%;
@@ -160,13 +153,11 @@ body {
     flex-direction: column;
     background-color: transparent;
     position: absolute;
-    top: 76px; /* Adjust this to align with your nav height */
-  
+    top: 76px;
     right: 10%;
     width: 20%;
-    box-shadow: 0 2px 4px rgba(0, 0, 1, .5);
+    box-shadow: 0 2px 4px rgba(0, 0, 1, 0.5);
     z-index: 999;
-
   }
 
   .nav-links.show ul {
@@ -182,24 +173,26 @@ body {
   .nav-links.show a {
     color: white;
   }
+
   .nav-links a:hover {
     font-size: 25px;
     font-weight: 700;
     color: black;
   }
+
   .nav-toggle {
     display: block;
   }
 
   .nav-connect {
-    display: block; /* Show on smaller screens */
+    display: block;
     font-size: 1.2em;
     color: white;
     padding: 10px;
     border-radius: 16px;
     background-color: goldenrod;
     cursor: pointer;
-    margin-top: 0; /* Adjust spacing */
+    margin-top: 0;
   }
 }
 
@@ -226,6 +219,14 @@ body {
   width: 80%; /* Adjust to make sure it's not too close to the edges */
   text-align: center;
   white-space: nowrap; /* Ensure the text stays in one line */
+}
+#alish-image {
+  width: 10%;
+    position: absolute;
+    pointer-events: none; /* Make sure the image doesn't interfere with mouse events */
+    z-index: -1; /* Behind everything */
+    opacity: 199; /* Adjust the opacity of the image */
+    transition: left 0.1s, top 0.1s; /* Smooth transition effect */
 }
 .image-container {
   z-index: 1;
