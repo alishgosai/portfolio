@@ -136,7 +136,7 @@ body {
 }
 
 /* Responsive Styles */
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   .nav-container {
     flex-direction: row;
     align-items: center;
@@ -196,6 +196,60 @@ body {
   }
 }
 
+
+@media only screen and (min-width: 1px) and (max-width: 320px) {
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    width: 80%;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    position: absolute;
+    top: 76px;
+    right: 10%;
+    width: 20%;
+    box-shadow: 0 2px 4px rgba(0, 0, 1, 0.5);
+    z-index: 999;
+  }
+
+  .nav-links.show ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-links.show li {
+    margin: 10px 0;
+  }
+
+  .nav-links.show a {
+    color: white;
+  }
+
+  .nav-links a:hover {
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-connect {
+    display: none;
+  }
+}
+
 /* Home section styles */
 .section-home {
   position: relative;
@@ -220,7 +274,7 @@ body {
   white-space: nowrap; /* Ensure the text stays in one line */
 }
 #vector-background {
-width: auto;
+width: 100%;
 height: 99%;
 margin-left: 0;
 z-index: -1;
@@ -322,15 +376,53 @@ z-index: -1;
     line-height: 1.2; /* Adjust line height for readability */
   
   }
+  #vector-background {
+    object-fit: fill;
+
+    z-index: -1;
+    }
+
   .cover-image {
     object-fit: cover;
-  height: 80%;
+    height: 80%;
   width: 100%;
-  
+  max-height: 100%;
   }
+  
   .arrow-box {
     background-color: transparent;
-    width: 80%;
+    width: auto;
+    height: auto;
+    font-size: 1em;
+    margin-bottom: 100px;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+}
+
+
+@media only screen and (min-width: 1px) and (max-width: 320px) {
+  .home-title {
+   top: 30%;
+    font-size: 18vw;
+    white-space: normal; /* Allow text to wrap */
+    line-height: 1.2; /* Adjust line height for readability */
+  }
+  #vector-background {
+    object-fit: fill;
+    z-index: -1;
+    }
+
+  .cover-image {
+    object-fit: cover;
+    height: 80%;
+  width: 100%;
+  max-height: 100%;
+  }
+  
+  .arrow-box {
+    background-color: transparent;
+    width: auto;
     height: auto;
     font-size: 1em;
     margin-bottom: 100px;
