@@ -7,6 +7,8 @@
 
 /* Body styles */
 body {
+  background: url('/images/graphics/vector-curves.png') no-repeat center center fixed;
+  background-size: cover; /* Adjust the image to cover the entire background */
   width: 100%;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
@@ -108,8 +110,6 @@ body {
   display: block;
 }
 
-
-
 /* Scrolled nav styles */
 .nav.scrolled {
   background-color: #34230e;
@@ -138,7 +138,6 @@ body {
 /* Responsive Styles */
 @media only screen and (min-width: 420px) and (max-width: 768px) {
   .nav-container {
-  
     flex-direction: row;
     align-items: center;
   }
@@ -196,7 +195,6 @@ body {
     margin-top: 0;
   }
 }
-
 
 @media only screen and (min-width: 1px) and (max-width: 420px) {
   .nav-container {
@@ -261,6 +259,7 @@ body {
   align-items: flex-end;
 }
 
+
 .home-title {
   font-size: 9vw;
   font-family: "Syncopate", sans-serif;
@@ -274,20 +273,21 @@ body {
   text-align: center;
   white-space: nowrap; /* Ensure the text stays in one line */
 }
-#vector-background {
-width: 100%;
-height: 99%;
-margin-left: 0;
-z-index: -1;
-}
+
+/* #vector-background {
+  width: 100%;
+  height: 99%;
+  margin-left: 0;
+  z-index: -1;
+} */
 
 #alish-image {
   width: 5%;
-    position: absolute;
-    pointer-events: none; /* Make sure the image doesn't interfere with mouse events */
-    z-index: 0; /* Behind everything */
-    opacity: 199; /* Adjust the opacity of the image */
-    transition: left 0.1s, top 0.1s; /* Smooth transition effect */
+  position: absolute;
+  pointer-events: none; /* Make sure the image doesn't interfere with mouse events */
+  z-index: 1; /* Behind everything */
+  opacity: 200; /* Adjust the opacity of the image */
+  transition: left 0.1s, top 0.1s; /* Smooth transition effect */
 }
 .image-container {
   z-index: 1;
@@ -299,7 +299,6 @@ z-index: -1;
   display: flex;
   justify-content: center;
   align-items: flex-end; /* Align image to the bottom */
-
 }
 
 .cover-image {
@@ -314,7 +313,7 @@ z-index: -1;
   position: absolute;
   background-color: #34230e;
   color: goldenrod;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 1rem 2rem hsl(0 0% 0% / 40%);
   padding: 0px;
   display: flex;
   flex-direction: column;
@@ -337,7 +336,7 @@ z-index: -1;
 }
 .arrow-box .scroll-down {
   animation: bounce 2s infinite;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   background-color: transparent;
   border-radius: 50%;
   padding: 10px;
@@ -346,9 +345,8 @@ z-index: -1;
 .scroll-down .fas :hover {
   background-color: goldenrod;
   color: #fff;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.9);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
 }
-
 
 .home-description {
   position: relative;
@@ -369,27 +367,32 @@ z-index: -1;
   margin-left: 10%;
   margin-bottom: 15%;
 } */
+@media only screen and (min-width: 1px) and (max-width: 400px) {
+  #alish-image {
+    display: none;
+  }
+}
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   .home-title {
-   top: 38%;
+    top: 38%;
     font-size: 18vw;
     white-space: normal; /* Allow text to wrap */
     line-height: 1.2; /* Adjust line height for readability */
-  
   }
-  #vector-background {
+
+  /* #vector-background {
     object-fit: fill;
 
     z-index: -1;
-    }
+  } */
 
   .cover-image {
     object-fit: cover;
     height: 80%;
-  width: 100%;
-  max-height: 100%;
+    width: 100%;
+    max-height: 100%;
   }
-  
+
   .arrow-box {
     background-color: transparent;
     width: auto;
@@ -401,10 +404,9 @@ z-index: -1;
   }
 }
 
-
 @media only screen and (min-width: 1px) and (max-width: 320px) {
   .home-title {
-   top: 30%;
+    top: 30%;
     font-size: 18vw;
     white-space: normal; /* Allow text to wrap */
     line-height: 1.2; /* Adjust line height for readability */
@@ -412,15 +414,15 @@ z-index: -1;
   #vector-background {
     object-fit: fill;
     z-index: -1;
-    }
+  }
 
   .cover-image {
     object-fit: cover;
     height: 80%;
-  width: 100%;
-  max-height: 100%;
+    width: 100%;
+    max-height: 100%;
   }
-  
+
   .arrow-box {
     background-color: transparent;
     width: auto;
@@ -446,9 +448,7 @@ z-index: -1;
   background-size: cover;
   background-position: center;
   z-index: 4;
-} 
-
-
+}
 
 /* About section */
 .section-about {
@@ -501,7 +501,8 @@ z-index: -1;
 }
 
 footer {
-  margin-top: 10px;
+  position: absolute;
+  margin: 0;
   background-color: #63310c; /* Darker SaddleBrown */
   height: auto;
   width: 100%;
@@ -509,6 +510,7 @@ footer {
   color: #daa520; /* Goldenrod */
   padding: 20px;
   text-align: center;
+  z-index: 8;
 }
 
 .footer-content {
