@@ -31,7 +31,7 @@
           <li><a href="html/about.html">About</a></li>
           <li><a href="#resume">Resume</a></li>
           <li><a href="html/projects.html">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="html/contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="nav-connect">
@@ -109,37 +109,6 @@
 
 
 
-  <section id="contact" class="section-contact">
-    <h1 class="contact-title">Contact Me</h1>
-    <div class="contact-container">
-        <div class="contact-info">
-            <h2>Contact Information</h2>
-            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:alishgosai@gmail.com">alishgosai@gmail.com</a></p>
-            <p><i class="fas fa-phone"></i> Phone: <a href="tel:+61450000000">+61 0450000000</a></p>
-            <p><i class="fas fa-map-marker-alt"></i> Address: Hurstville, NSW, Australia</p>
-            <div id="map"></div>
-        </div>
-        <div class="contact-form">
-            <h2>Send a Message</h2>
-            <form action="YOUR_BACKEND_URL" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
-
 
 
 
@@ -176,20 +145,7 @@
 
 
   <script src="js/main.js"></script>
-  <script>
-    function initMap() {
-        var hurstville = {lat: -33.9698, lng: 151.1013};
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 14,
-            center: hurstville
-        });
-        var marker = new google.maps.Marker({
-            position: hurstville,
-            map: map
-        });
-    }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  
 </body>
 
 </html>
