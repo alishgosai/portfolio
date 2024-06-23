@@ -1,0 +1,150 @@
+/* Reset and global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #34230e; /* Dark background color */
+  color: #ffffff; /* White text color */
+  line-height: 1.6;
+}
+
+/* Sections styling */
+.section-projects,
+.section-skills {
+  width: 80%; /* Cover 80% of viewport width */
+  max-width: 1200px; /* Limit maximum width */
+  margin: 0 auto; /* Center the sections horizontally */
+  padding: 80px 0;
+}
+
+.projects-container,
+.skills-container {
+  padding: 0 20px;
+}
+
+/* Project styling */
+.project {
+  display: flex;
+  margin-bottom: 40px;
+  background-color: #1f1f1f; /* Darker background for projects */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.project-details {
+  padding: 20px;
+  flex: 1;
+}
+
+.project-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: goldenrod; /* Goldenrod color for titles */
+}
+
+.project-description {
+  margin-bottom: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  flex: 0 0 calc(50% - 10px);
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Initially translate down */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.skill.active {
+  opacity: 1; /* Fade in when active */
+  transform: translateY(0); /* Move up when active */
+}
+
+
+.skill:hover {
+  transform: translateY(-5px); /* Hover effect */
+}
+
+.skill i {
+  font-size: 24px; /* Adjust icon size */
+  color: goldenrod; /* Goldenrod color for icons */
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 8px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Transparent white for progress bar background */
+  margin: 10px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: goldenrod; /* Goldenrod color for progress bars */
+  border-radius: 8px;
+  width: var(
+    --progress,
+    0
+  ); /* Initial width set to 0, will be updated via JS */
+  transition: width 1s ease;
+}
+
+/* Skills section styling */
+.section-skills {
+  background-color: #34230e; /* Dark background color */
+}
+
+.skills-container {
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills h2 {
+  color: goldenrod; /* Goldenrod color for skills section heading */
+  margin-bottom: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+
+  .project img {
+    width: 100%;
+    height: auto;
+  }
+
+  .skill {
+    flex: 0 0 100%;
+  }
+}

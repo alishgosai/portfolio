@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+  .section-about {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 50px 0; /* Adjust padding as needed */
+  text-align: center;
+}
+
+.about-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust gap between skills */
+}
+
+.skill {
+  flex: 0 0 calc(50% - 20px); /* Two skills per row on larger screens */
+  background-color: #ffffff; /* White background for skill boxes */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for skill boxes */
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0; /* Initially hide skills */
+  transform: translateY(20px); /* Shift skills down */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.skill.active {
+  opacity: 1; /* Show skills when active */
+  transform: translateY(0); /* Move skills back to original position */
+}
+
+.skill img {
+  max-width: 50px; /* Adjust icon size */
+  height: auto;
+}
+
+.progress {
+  width: 100%;
+  height: 10px; /* Height of progress bar */
+  background-color: #dee2e6; /* Background color of progress bar */
+  margin: 10px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #007bff; /* Blue color for progress bar */
+  border-radius: 8px;
+  width: 0; /* Start with 0 width */
+  transition: width 1s ease; /* Smooth transition for width */
+}
+
+.skill.active .progress-bar {
+  width: calc(var(--progress) * 1%);
+}
+
+
+  </style>
+</head>
+<body>
+  <br><br><br>
+  <br><br><br>
+  <br><br><br>
+  <br><br><br><br><br><br>
+  <br><br><br><br><br><br>
+  <br><br><br><br><br><br>
+  <br><br><br><br><br><br>
+  <br><br><br><br><br><br>
+  <br><br><br><br><br><br>
+  <br><br><br><br><br><br>
+  <br><br><br>
+  
+  <section id="about" class="section-about">
+    <div class="about-container">
+      <h1>About Me</h1>
+      <div class="skills">
+        <div class="skill">
+          <img src="path_to_bootstrap_icon.png" alt="Bootstrap Icon">
+          <div class="progress">
+            <div class="progress-bar" data-progress="80"></div> <!-- Adjust progress percentage -->
+          </div>
+          <p>Bootstrap</p>
+        </div>
+        <div class="skill">
+          <img src="path_to_github_icon.png" alt="GitHub Icon">
+          <div class="progress">
+            <div class="progress-bar" data-progress="90"></div> <!-- Adjust progress percentage -->
+          </div>
+          <p>GitHub</p>
+        </div>
+        <!-- Add more skills as needed -->
+      </div>
+    </div>
+  </section>
+  
+  
+  <script>// Function to check if an element is in viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+    
+    // Function to animate skills when they scroll into view
+// Function to animate skills when they scroll into view
+function animateSkills() {
+  const skills = document.querySelectorAll('.skill');
+  skills.forEach(skill => {
+    if (isInViewport(skill)) {
+      skill.classList.add('active');
+      
+      // Animate progress bar width
+      const progressBar = skill.querySelector('.progress-bar');
+      const width = progressBar.dataset.progress;
+      progressBar.style.setProperty('--progress', width);
+    }
+  });
+}
+
+    
+    // Event listener for scrolling
+    window.addEventListener('scroll', animateSkills);
+    
+    // Initial animation check
+    animateSkills();
+    </script>
+  
+</body>
+</html>

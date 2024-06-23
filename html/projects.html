@@ -3,110 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  
+  <title>Projects Showcase</title>
+
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <style>
-  .section-about {
-  background-color: #f8f9fa; /* Light background color */
-  padding: 50px 0; /* Adjust padding as needed */
-  text-align: center;
-}
-
-.about-container {
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Adjust gap between skills */
-}
-
-.skill {
-  flex: 0 0 calc(50% - 20px); /* Two skills per row on larger screens */
-  background-color: #ffffff; /* White background for skill boxes */
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for skill boxes */
-  border-radius: 8px;
-  text-align: center;
-  opacity: 0; /* Initially hide skills */
-  transform: translateY(20px); /* Shift skills down */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
-}
-
-.skill.active {
-  opacity: 1; /* Show skills when active */
-  transform: translateY(0); /* Move skills back to original position */
-}
-
-.skill img {
-  max-width: 50px; /* Adjust icon size */
-  height: auto;
-}
-
-.progress {
-  width: 100%;
-  height: 10px; /* Height of progress bar */
-  background-color: #dee2e6; /* Background color of progress bar */
-  margin: 10px 0;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: #007bff; /* Blue color for progress bar */
-  border-radius: 8px;
-  width: 0; /* Start with 0 width */
-  transition: width 1s ease; /* Smooth transition for width */
-}
-
-.skill.active .progress-bar {
-  width: calc(var(--progress) * 1%);
-}
-
-
-  </style>
+  <!-- Styles -->
+  <!-- Custom styles -->
+   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/projects.css">
 </head>
 <body>
-  <br><br><br>
-  <br><br><br>
-  <br><br><br>
-  <br><br><br><br><br><br>
-  <br><br><br><br><br><br>
-  <br><br><br><br><br><br>
-  <br><br><br><br><br><br>
-  <br><br><br><br><br><br>
-  <br><br><br><br><br><br>
-  <br><br><br><br><br><br>
-  <br><br><br>
-  
-  <section id="about" class="section-about">
-    <div class="about-container">
-      <h1>About Me</h1>
-      <div class="skills">
+
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#home">
+          <img src="../images/logo-no-bg.png" alt="Logo" class="my-nav-logo">
+        </a>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-connect">
+        <span>Let's Connect</span>
+      </div>
+      <div class="nav-toggle">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times" style="display: none;"></i>
+      </div>
+    </div>
+  </nav>
+ 
+  <section id="projects" class="section-projects">
+    <div class="projects-container">
+      <h1>My Projects</h1>
+
+      <!-- Project 1 -->
+      <div class="project">
+        <img src="../images/alish-cover2.png" alt="Project 1 Image">
+        <div class="project-details">
+          <h2 class="project-title">Project 1</h2>
+          <p class="project-description">
+            Description of Project 1 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <div class="skills">
+            <!-- Skills for Project 1 -->
+            <div class="skill">
+              <i class="fab fa-html5"></i> <!-- Font Awesome HTML5 Icon -->
+              <div class="progress">
+                <div class="progress-bar" data-progress="90"></div>
+              </div>
+              <p>HTML</p>
+            </div>
+            <div class="skill">
+              <i class="fab fa-css3-alt"></i> <!-- Font Awesome CSS3 Icon -->
+              <div class="progress">
+                <div class="progress-bar" data-progress="85"></div>
+              </div>
+              <p>CSS</p>
+            </div>
+            <!-- Add more skills as needed for Project 1 -->
+          </div>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <!-- Repeat for Project 2 to Project 6 -->
+
+      <!-- Project 2 -->
+      <div class="project">
+        <img src="../images/alish-cover0.png" alt="Project 2 Image">
+        <div class="project-details">
+          <h2 class="project-title">Project 2</h2>
+          <p class="project-description">
+            Description of Project 2 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <div class="skills">
+            <!-- Skills for Project 2 -->
+            <div class="skill">
+              <i class="fab fa-html5"></i> <!-- Font Awesome HTML5 Icon -->
+              <div class="progress">
+                <div class="progress-bar" data-progress="85"></div>
+              </div>
+              <p>HTML</p>
+            </div>
+            <div class="skill">
+              <i class="fab fa-js"></i> <!-- Font Awesome JavaScript Icon -->
+              <div class="progress">
+                <div class="progress-bar" data-progress="80"></div>
+              </div>
+              <p>JavaScript</p>
+            </div>
+            <!-- Add more skills as needed for Project 2 -->
+          </div>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <!-- Repeat Project 3 to Project 6 following the same structure -->
+
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section-skills">
+    <div class="skills-container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <!-- Skill 1 -->
         <div class="skill">
-          <img src="path_to_bootstrap_icon.png" alt="Bootstrap Icon">
+          <i class="fab fa-html5"></i> <!-- Font Awesome HTML5 Icon -->
           <div class="progress">
-            <div class="progress-bar" data-progress="80"></div> <!-- Adjust progress percentage -->
+            <div class="progress-bar" data-progress="90"></div>
+          </div>
+          <p>HTML</p>
+        </div>
+        <!-- Skill 2 -->
+        <div class="skill">
+          <i class="fab fa-css3-alt"></i> <!-- Font Awesome CSS3 Icon -->
+          <div class="progress">
+            <div class="progress-bar" data-progress="85"></div>
+          </div>
+          <p>CSS</p>
+        </div>
+        <!-- Skill 3 -->
+        <div class="skill">
+          <i class="fab fa-js"></i> <!-- Font Awesome JavaScript Icon -->
+          <div class="progress">
+            <div class="progress-bar" data-progress="80"></div>
+          </div>
+          <p>JavaScript</p>
+        </div>
+        <!-- Skill 4 -->
+        <div class="skill">
+          <i class="fab fa-bootstrap"></i> <!-- Font Awesome Bootstrap Icon -->
+          <div class="progress">
+            <div class="progress-bar" data-progress="75"></div>
           </div>
           <p>Bootstrap</p>
         </div>
+        <!-- Skill 5 -->
         <div class="skill">
-          <img src="path_to_github_icon.png" alt="GitHub Icon">
+          <i class="fab fa-webflow"></i> <!-- Font Awesome Webflow Icon -->
           <div class="progress">
-            <div class="progress-bar" data-progress="90"></div> <!-- Adjust progress percentage -->
+            <div class="progress-bar" data-progress="70"></div>
           </div>
-          <p>GitHub</p>
+          <p>Webflow</p>
         </div>
         <!-- Add more skills as needed -->
       </div>
     </div>
   </section>
-  
-  
-  <script>// Function to check if an element is in viewport
+
+  <!-- Custom script for animation -->
+   <script src="../js/main.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    // Function to check if an element is in viewport
     function isInViewport(element) {
       const rect = element.getBoundingClientRect();
       return (
@@ -116,30 +174,41 @@
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
     }
-    
+  
     // Function to animate skills when they scroll into view
-// Function to animate skills when they scroll into view
-function animateSkills() {
-  const skills = document.querySelectorAll('.skill');
-  skills.forEach(skill => {
-    if (isInViewport(skill)) {
-      skill.classList.add('active');
-      
-      // Animate progress bar width
-      const progressBar = skill.querySelector('.progress-bar');
-      const width = progressBar.dataset.progress;
-      progressBar.style.setProperty('--progress', width);
+    function animateSkills() {
+      const skills = document.querySelectorAll('.skill');
+      let allAnimated = true; // Flag to track if all skills have been animated
+  
+      skills.forEach(skill => {
+        if (isInViewport(skill) && !skill.classList.contains('animated')) {
+          skill.classList.add('active', 'animated');
+          
+          // Animate progress bar width
+          const progressBar = skill.querySelector('.progress-bar');
+          const width = progressBar.dataset.progress;
+          progressBar.style.width = width + '%'; // Set width directly
+        }
+  
+        // Check if all skills have been animated
+        if (!skill.classList.contains('animated')) {
+          allAnimated = false;
+        }
+      });
+  
+      // If all skills have been animated, remove the scroll event listener
+      if (allAnimated) {
+        window.removeEventListener('scroll', animateSkills);
+      }
     }
-  });
-}
-
-    
+  
     // Event listener for scrolling
     window.addEventListener('scroll', animateSkills);
-    
-    // Initial animation check
-    animateSkills();
-    </script>
   
+    // Initial animation check on DOMContentLoaded
+    animateSkills();
+  });
+  
+  </script>
 </body>
 </html>
