@@ -1,0 +1,67 @@
+
+/* About section */
+#about {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh; /* Ensure the section takes at least the height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #34230e; /* Adjust as per your design */
+  background-position: center;
+  z-index: 4;
+  margin: 0 auto; /* Center the sections horizontally */
+  padding: 100px 0;
+}
+
+/* About section */
+.section-about {
+  color: goldenrod;
+  text-align: center;
+  width: 80%; /* Cover 80% of viewport width */
+  max-width: 1200px; /* Limit maximum width */
+  margin: 0 auto; /* Center the sections horizontally */
+  padding: 100px 0;
+}
+
+.about-container {
+ width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px; /* Adjust the gap between boxes */
+}
+
+.about-box {
+  flex: 1 1 400px; /* Flexbox properties for responsiveness */
+  background-color: transparent; /* Darker SaddleBrown */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.about-box h2,
+.about-box h3 {
+  color: goldenrod;
+}
+
+.about-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-box ul li {
+  margin-bottom: 10px;
+}
+
+.about-box ul li a {
+  color: #daa520; /* Goldenrod */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-box ul li a:hover {
+  color: #ffd700; /* Lighter golden color for hover effect */
+}

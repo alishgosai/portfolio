@@ -1,29 +1,28 @@
-/* Reset and global styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #34230e; /* Dark background color */
-  color: #ffffff; /* White text color */
-  line-height: 1.6;
-}
 
 /* Sections styling */
 .section-projects,
 .section-skills {
-  width: 80%; /* Cover 80% of viewport width */
-  max-width: 1200px; /* Limit maximum width */
+  position: relative;
+  width: 100vw;
+  min-height: 100vh; /* Ensure the section takes at least the height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #34230e; /* Adjust as per your design */
+  background-position: center;
+  z-index: 4;
   margin: 0 auto; /* Center the sections horizontally */
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .projects-container,
 .skills-container {
-  padding: 0 20px;
+  width: 80%; /* Cover 80% of viewport width */
+  max-width: 1200px; /* Limit maximum width */
+  margin: 0 auto; /* Center the sections horizontally */
+  padding: 100px 0;
+  
+  padding: 0;
 }
 
 /* Project styling */
@@ -111,6 +110,19 @@ body {
   ); /* Initial width set to 0, will be updated via JS */
   transition: width 1s ease;
 }
+.projects-container a {
+  color: goldenrod;
+  text-decoration: underline; /* Remove underline */
+  transition: color 0.2s ease; /* Smooth transition for color change */
+}
+
+.projects-container a:hover {
+  color: #ffd700; /* Lighter shade of goldenrod on hover */
+  font-weight: bold; /* Increase font weight on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+
 
 /* Skills section styling */
 .section-skills {

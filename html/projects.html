@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects Showcase</title>
-
-  <!-- Font Awesome for icons -->
+  <title>Alish Gosai</title>
+  <link rel="icon" href="images/logo-no-bg.png" type="image/x-icon">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- Styles -->
-  <!-- Custom styles -->
-   <link rel="stylesheet" href="../css/styles.css">
+   <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/projects.css">
 </head>
+
 <body>
 
+  <!-- Navbar for my portfolio -->
   <nav class="nav">
     <div class="nav-container">
       <div class="nav-logo">
-        <a href="#home">
+        <a href="../index.html">
           <img src="../images/logo-no-bg.png" alt="Logo" class="my-nav-logo">
         </a>
       </div>
       <div class="nav-links">
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="../html/about.html">About</a></li>
+          <li><a href="../html/resume.html">Resume</a></li>
+          <li><a href="../html/projects.html">Projects</a></li>
+          <li><a href="../html/contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="nav-connect">
-        <span>Let's Connect</span>
+        <a href="https://www.instagram.com/alish___gosai/" target="_blank">
+          Let's Connect
+        </a>
       </div>
       <div class="nav-toggle">
         <i class="fas fa-bars"></i>
@@ -39,176 +48,185 @@
       </div>
     </div>
   </nav>
+
+<!-- navbar ends here -->
+
+<section id="projects" class="section-projects">
+  <div class="projects-container">
+    <h1>My Projects</h1>
+
+    <!-- Project 1 -->
+    <div class="project">
+      <img src="../images/alish-cover2.png" alt="Project 1 Image">
+      <div class="project-details">
+        <h2 class="project-title">Project 1</h2>
+        <p class="project-description">
+          Description of Project 1 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="skills">
+          <!-- Skills for Project 1 -->
+          <div class="skill">
+            <i class="fab fa-html5"></i> <!-- Font Awesome HTML5 Icon -->
+            <div class="progress">
+              <div class="progress-bar" data-progress="90"></div>
+            </div>
+            <p>HTML</p>
+          </div>
+          <div class="skill">
+            <i class="fab fa-css3-alt"></i> <!-- Font Awesome CSS3 Icon -->
+            <div class="progress">
+              <div class="progress-bar" data-progress="85"></div>
+            </div>
+            <p>CSS</p>
+          </div>
+          <!-- Add more skills as needed for Project 1 -->
+        </div>
+        <a href="https://github.com/alishgosai" class="btn">View Project</a>
+      </div>
+    </div>
+
+    <!-- Repeat for Project 2 to Project 6 -->
+
+    <!-- Project 2 -->
+    <div class="project">
+      <img src="../images/alish-cover0.png" alt="Project 2 Image">
+      <div class="project-details">
+        <h2 class="project-title">Project 2</h2>
+        <p class="project-description">
+          Description of Project 2 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="skills">
+          <!-- Skills for Project 2 -->
+          <div class="skill">
+            <i class="fab fa-html5"></i> <!-- Font Awesome HTML5 Icon -->
+            <div class="progress">
+              <div class="progress-bar" data-progress="85"></div>
+            </div>
+            <p>HTML</p>
+          </div>
+          <div class="skill">
+            <i class="fab fa-js"></i> <!-- Font Awesome JavaScript Icon -->
+            <div class="progress">
+              <div class="progress-bar" data-progress="80"></div>
+            </div>
+            <p>JavaScript</p>
+          </div>
+          <!-- Add more skills as needed for Project 2 -->
+        </div>
+        <a href="https://github.com/alishgosai" class="btn">View Project</a>
+      </div>
+    </div>
+
+    <!-- Repeat Project 3 to Project 6 following the same structure -->
+
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section-skills">
+  <div class="skills-container">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <!-- Skill 1 -->
+      <div class="skill">
+        <i class="fab fa-html5"></i> <!-- Font Awesome HTML5 Icon -->
+        <div class="progress">
+          <div class="progress-bar" data-progress="90"></div>
+        </div>
+        <p>HTML</p>
+      </div>
+      <!-- Skill 2 -->
+      <div class="skill">
+        <i class="fab fa-css3-alt"></i> <!-- Font Awesome CSS3 Icon -->
+        <div class="progress">
+          <div class="progress-bar" data-progress="85"></div>
+        </div>
+        <p>CSS</p>
+      </div>
+      <!-- Skill 3 -->
+      <div class="skill">
+        <i class="fab fa-js"></i> <!-- Font Awesome JavaScript Icon -->
+        <div class="progress">
+          <div class="progress-bar" data-progress="80"></div>
+        </div>
+        <p>JavaScript</p>
+      </div>
+      <!-- Skill 4 -->
+      <div class="skill">
+        <i class="fab fa-bootstrap"></i> <!-- Font Awesome Bootstrap Icon -->
+        <div class="progress">
+          <div class="progress-bar" data-progress="75"></div>
+        </div>
+        <p>Bootstrap</p>
+      </div>
+      <!-- Skill 5 -->
+      <div class="skill">
+        <i class="fab fa-webflow"></i> <!-- Font Awesome Webflow Icon -->
+        <div class="progress">
+          <div class="progress-bar" data-progress="70"></div>
+        </div>
+        <p>Webflow</p>
+      </div>
+      <!-- Add more skills as needed -->
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<script src="../js/main.js"></script>
+ <!-- Custom script for animation -->
+ <script src="../js/main.js"></script>
+ <script>document.addEventListener('DOMContentLoaded', function() {
+   // Function to check if an element is in viewport
+   function isInViewport(element) {
+     const rect = element.getBoundingClientRect();
+     return (
+       rect.top >= 0 &&
+       rect.left >= 0 &&
+       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+     );
+   }
  
-  <section id="projects" class="section-projects">
-    <div class="projects-container">
-      <h1>My Projects</h1>
-
-      <!-- Project 1 -->
-      <div class="project">
-        <img src="../images/alish-cover2.png" alt="Project 1 Image">
-        <div class="project-details">
-          <h2 class="project-title">Project 1</h2>
-          <p class="project-description">
-            Description of Project 1 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <div class="skills">
-            <!-- Skills for Project 1 -->
-            <div class="skill">
-              <i class="fab fa-html5"></i> <!-- Font Awesome HTML5 Icon -->
-              <div class="progress">
-                <div class="progress-bar" data-progress="90"></div>
-              </div>
-              <p>HTML</p>
-            </div>
-            <div class="skill">
-              <i class="fab fa-css3-alt"></i> <!-- Font Awesome CSS3 Icon -->
-              <div class="progress">
-                <div class="progress-bar" data-progress="85"></div>
-              </div>
-              <p>CSS</p>
-            </div>
-            <!-- Add more skills as needed for Project 1 -->
-          </div>
-          <a href="#" class="btn">View Project</a>
-        </div>
-      </div>
-
-      <!-- Repeat for Project 2 to Project 6 -->
-
-      <!-- Project 2 -->
-      <div class="project">
-        <img src="../images/alish-cover0.png" alt="Project 2 Image">
-        <div class="project-details">
-          <h2 class="project-title">Project 2</h2>
-          <p class="project-description">
-            Description of Project 2 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <div class="skills">
-            <!-- Skills for Project 2 -->
-            <div class="skill">
-              <i class="fab fa-html5"></i> <!-- Font Awesome HTML5 Icon -->
-              <div class="progress">
-                <div class="progress-bar" data-progress="85"></div>
-              </div>
-              <p>HTML</p>
-            </div>
-            <div class="skill">
-              <i class="fab fa-js"></i> <!-- Font Awesome JavaScript Icon -->
-              <div class="progress">
-                <div class="progress-bar" data-progress="80"></div>
-              </div>
-              <p>JavaScript</p>
-            </div>
-            <!-- Add more skills as needed for Project 2 -->
-          </div>
-          <a href="#" class="btn">View Project</a>
-        </div>
-      </div>
-
-      <!-- Repeat Project 3 to Project 6 following the same structure -->
-
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section-skills">
-    <div class="skills-container">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <!-- Skill 1 -->
-        <div class="skill">
-          <i class="fab fa-html5"></i> <!-- Font Awesome HTML5 Icon -->
-          <div class="progress">
-            <div class="progress-bar" data-progress="90"></div>
-          </div>
-          <p>HTML</p>
-        </div>
-        <!-- Skill 2 -->
-        <div class="skill">
-          <i class="fab fa-css3-alt"></i> <!-- Font Awesome CSS3 Icon -->
-          <div class="progress">
-            <div class="progress-bar" data-progress="85"></div>
-          </div>
-          <p>CSS</p>
-        </div>
-        <!-- Skill 3 -->
-        <div class="skill">
-          <i class="fab fa-js"></i> <!-- Font Awesome JavaScript Icon -->
-          <div class="progress">
-            <div class="progress-bar" data-progress="80"></div>
-          </div>
-          <p>JavaScript</p>
-        </div>
-        <!-- Skill 4 -->
-        <div class="skill">
-          <i class="fab fa-bootstrap"></i> <!-- Font Awesome Bootstrap Icon -->
-          <div class="progress">
-            <div class="progress-bar" data-progress="75"></div>
-          </div>
-          <p>Bootstrap</p>
-        </div>
-        <!-- Skill 5 -->
-        <div class="skill">
-          <i class="fab fa-webflow"></i> <!-- Font Awesome Webflow Icon -->
-          <div class="progress">
-            <div class="progress-bar" data-progress="70"></div>
-          </div>
-          <p>Webflow</p>
-        </div>
-        <!-- Add more skills as needed -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Custom script for animation -->
-   <script src="../js/main.js"></script>
-  <script>document.addEventListener('DOMContentLoaded', function() {
-    // Function to check if an element is in viewport
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-  
-    // Function to animate skills when they scroll into view
-    function animateSkills() {
-      const skills = document.querySelectorAll('.skill');
-      let allAnimated = true; // Flag to track if all skills have been animated
-  
-      skills.forEach(skill => {
-        if (isInViewport(skill) && !skill.classList.contains('animated')) {
-          skill.classList.add('active', 'animated');
-          
-          // Animate progress bar width
-          const progressBar = skill.querySelector('.progress-bar');
-          const width = progressBar.dataset.progress;
-          progressBar.style.width = width + '%'; // Set width directly
-        }
-  
-        // Check if all skills have been animated
-        if (!skill.classList.contains('animated')) {
-          allAnimated = false;
-        }
-      });
-  
-      // If all skills have been animated, remove the scroll event listener
-      if (allAnimated) {
-        window.removeEventListener('scroll', animateSkills);
-      }
-    }
-  
-    // Event listener for scrolling
-    window.addEventListener('scroll', animateSkills);
-  
-    // Initial animation check on DOMContentLoaded
-    animateSkills();
-  });
-  
-  </script>
+   // Function to animate skills when they scroll into view
+   function animateSkills() {
+     const skills = document.querySelectorAll('.skill');
+     let allAnimated = true; // Flag to track if all skills have been animated
+ 
+     skills.forEach(skill => {
+       if (isInViewport(skill) && !skill.classList.contains('animated')) {
+         skill.classList.add('active', 'animated');
+         
+         // Animate progress bar width
+         const progressBar = skill.querySelector('.progress-bar');
+         const width = progressBar.dataset.progress;
+         progressBar.style.width = width + '%'; // Set width directly
+       }
+ 
+       // Check if all skills have been animated
+       if (!skill.classList.contains('animated')) {
+         allAnimated = false;
+       }
+     });
+ 
+     // If all skills have been animated, remove the scroll event listener
+     if (allAnimated) {
+       window.removeEventListener('scroll', animateSkills);
+     }
+   }
+ 
+   // Event listener for scrolling
+   window.addEventListener('scroll', animateSkills);
+ 
+   // Initial animation check on DOMContentLoaded
+   animateSkills();
+ });
+ 
+ </script>
 </body>
 </html>
