@@ -29,7 +29,9 @@
 .project {
   display: flex;
   margin-bottom: 40px;
-  background-color: #1f1f1f; /* Darker background for projects */
+  /* background-color: #63310c; */
+  background-color: #1f1f1f; 
+  /* Darker background for projects */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -63,7 +65,8 @@
 
 .skill {
   flex: 0 0 calc(50% - 10px);
-  background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  background-color: rgba(255, 255, 255, 0.1); 
+  /* Transparent white background */
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
