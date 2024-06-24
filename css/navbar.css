@@ -1,0 +1,279 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  background: url("/images/graphics/vector-curves.png") no-repeat center center
+    fixed;
+  background-size: cover; /* Adjust the image to cover the entire background */
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #34230e;
+  color: goldenrod;
+  margin: 0;
+}
+
+/* Navigation Bar Styles */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.1s ease;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo a {
+  font-weight: bold;
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.my-nav-logo {
+  height: 76px;
+  width: 76px;
+  object-fit: cover;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  font-size: 1.2em;
+  color: goldenrod;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-connect a {
+  font-size: 1.2em;
+  color: goldenrod;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: #34230e;
+  text-decoration: none;
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+
+.nav-connect a:hover {
+  color: #34230e;
+  background-color: goldenrod;
+}
+
+/* Updated CSS for hamburger menu transformation */
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: goldenrod;
+}
+
+.nav-toggle .fa-bars {
+  display: block;
+}
+
+.nav-toggle .fa-times {
+  display: none;
+}
+
+.nav-toggle.active .fa-bars {
+  display: none;
+}
+
+.nav-toggle.active .fa-times {
+  display: block;
+}
+
+/* Scrolled nav styles */
+.nav.scrolled {
+  background: url('/images/graphics/vector-curves.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #34230e;
+  transition: ease .4s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav.scrolled .nav-links a {
+  color: goldenrod;
+}
+
+.nav.scrolled .nav-links a:hover {
+  color: white;
+}
+
+.nav.scrolled .nav-connect a {
+  color: #34230e;
+  background-color: goldenrod;
+}
+
+.nav.scrolled .nav-connect a:hover {
+  color: white;
+  background-color: goldenrod;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media only screen and (min-width: 420px) and (max-width: 768px) {
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.show {
+    background: url("/images/graphics/vector-curves.png") no-repeat center
+      center fixed;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    background-color: #34230e;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 1, 0.5);
+    z-index: 999;
+  }
+  /* 
+  .nav-links.show ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-links.show li {
+    margin: 10px 0;
+  }
+
+  .nav-links.show a {
+    color: white;
+  } */
+
+  .nav-links ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    color: goldenrod;
+    font-size: 1.5em;
+  }
+
+  .nav-links a:hover {
+    font-weight: 700;
+    color: white;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-connect a {
+    display: block;
+    font-size: 1.2em;
+    color: white;
+    padding: 10px;
+    border-radius: 16px;
+    background-color: goldenrod;
+    cursor: pointer;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 420px) {
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.show {
+    background: url("/images/graphics/vector-curves.png") no-repeat center center
+    fixed;
+  background-size: cover;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    background-color: #34230e;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 1, 0.5);
+    z-index: 999;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    color: goldenrod;
+    font-size: 1.5em;
+  }
+
+  .nav-links a:hover {
+    font-size: 700;
+    color: white;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-connect a {
+    display: none;
+  }
+}
