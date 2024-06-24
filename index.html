@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <!-- AOS CSS - Include the AOS library stylesheet -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <!-- Styles -->
    <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -67,56 +69,55 @@
     </div>
   </section>
   
-  <!-- about section setart here -->
+    <!-- about section setart here -->
 
-  <section id="about" class="section-about">
-    <div class="about-container">
-      <div class="about-box">
-        <h2>About Me</h2>
-        <p>Welcome to my corner of the web! I am a passionate tech enthusiast with a keen interest in web development,
-          currently honing my skills in ASP.NET MVC. I thrive on curiosity and am driven by a relentless pursuit of
-          knowledge in the ever-evolving tech landscape.</p>
+    <section id="about" class="section-about">
+      <div class="about-container">
+        <div class="about-box" data-aos="fade-up">
+          <h2>About Me</h2>
+          <p>Welcome to my corner of the web! I am a passionate tech enthusiast with a keen interest in web development,
+            currently honing my skills in ASP.NET MVC. I thrive on curiosity and am driven by a relentless pursuit of
+            knowledge in the ever-evolving tech landscape.</p>
+        </div>
+  
+        <div class="about-box" data-aos="fade-up">
+          <h3>What I Love:</h3>
+          <ul>
+            <li><strong>Web Development:</strong> My heart beats for crafting engaging and functional web experiences.
+            </li>
+            <li><strong>ASP.NET MVC:</strong> Currently diving deep into the world of .NET development.</li>
+            <li><strong>Learning and Growing:</strong> I believe in continuous improvement and lifelong learning.</li>
+          </ul>
+        </div>
+  
+        <div class="about-box" data-aos="fade-up">
+          <h3>Let's Connect:</h3>
+          <ul class="social-links">
+            <li><a href="https://www.linkedin.com/in/alishgosai/" target="_blank">Connect on LinkedIn</a></li>
+            <li><a href="https://twitter.com/alishgosai" target="_blank">Follow me on Twitter</a></li>
+            <li><a href="https://github.com/alishgosai" target="_blank">Explore my projects on GitHub</a></li>
+            <li><a href="https://www.youtube.com/c/ALISHGOSAI?sub_confirmation=1" target="_blank">Subscribe to my YouTube
+                channel</a></li>
+            <li><a href="https://www.instagram.com/alish___gosai/" target="_blank">Follow me on Instagram</a></li>
+            <li><a href="https://www.facebook.com/alishgosai" target="_blank">Connect on Facebook</a></li>
+          </ul>
+        </div>
+  
+        <div class="about-box" data-aos="fade-up">
+          <h3>Other Interests:</h3>
+          <p>Apart from coding, I find joy in other creative pursuits like mountain biking, drawing & pyrography, and
+            editing photos & videos. These activities complement my technical side and provide a well-rounded perspective
+            on life.</p>
+        </div>
+  
+        <div class="about-box" data-aos="fade-up">
+          <h3>Get in Touch:</h3>
+          <p>Have an idea or project in mind? Feel free to reach out. Let's collaborate and create something awesome
+            together!</p>
+        </div>
       </div>
-
-      <div class="about-box">
-        <h3>What I Love:</h3>
-        <ul>
-          <li><strong>Web Development:</strong> My heart beats for crafting engaging and functional web experiences.
-          </li>
-          <li><strong>ASP.NET MVC:</strong> Currently diving deep into the world of .NET development.</li>
-          <li><strong>Learning and Growing:</strong> I believe in continuous improvement and lifelong learning.</li>
-        </ul>
-      </div>
-
-      <div class="about-box">
-        <h3>Let's Connect:</h3>
-        <ul class="social-links">
-          <li><a href="https://www.linkedin.com/in/alishgosai/" target="_blank">Connect on LinkedIn</a></li>
-          <li><a href="https://twitter.com/alishgosai" target="_blank">Follow me on Twitter</a></li>
-          <li><a href="https://github.com/alishgosai" target="_blank">Explore my projects on GitHub</a></li>
-          <li><a href="https://www.youtube.com/c/ALISHGOSAI?sub_confirmation=1" target="_blank">Subscribe to my YouTube
-              channel</a></li>
-          <li><a href="https://www.instagram.com/alish___gosai/" target="_blank">Follow me on Instagram</a></li>
-          <li><a href="https://www.facebook.com/alishgosai" target="_blank">Connect on Facebook</a></li>
-        </ul>
-      </div>
-
-      <div class="about-box">
-        <h3>Other Interests:</h3>
-        <p>Apart from coding, I find joy in other creative pursuits like mountain biking, drawing & pyrography, and
-          editing photos & videos. These activities complement my technical side and provide a well-rounded perspective
-          on life.</p>
-      </div>
-
-      <div class="about-box">
-        <h3>Get in Touch:</h3>
-        <p>Have an idea or project in mind? Feel free to reach out. Let's collaborate and create something awesome
-          together!</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- about section ends here -->
+    </section>
+    <!-- about ends here -->
 
 
 
@@ -156,9 +157,14 @@
 
 
 
-
-
   <script src="js/main.js"> </script>
+ <!-- AOS JavaScript - Include the AOS library JavaScript -->
+ <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+ <script>
+   // Initialize AOS
+   AOS.init();
+ </script>
+  
   
 </body>
 

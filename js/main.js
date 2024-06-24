@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
-  const alishImage = document.getElementById("alish-image");
+  let alishImage = document.getElementById("alish-image");
 
   // Navbar toggle functionality
   navToggle.addEventListener("click", function () {
@@ -51,36 +51,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to hide the image after mouse interaction
   function hideImage() {
-    alishImage.style.display = "none";
-    // Remove mousemove event listener after hiding the image
-    document.removeEventListener("mousemove", handleMouseMove);
+    if (alishImage) {
+      alishImage.style.display = "none";
+      // Remove mousemove event listener after hiding the image
+      document.removeEventListener("mousemove", handleMouseMove);
+    }
   }
 
   // Mousemove event handler to track mouse position
   function handleMouseMove(event) {
-    var mouseX = event.pageX;
-    var mouseY = event.pageY;
-    var halfWidth = alishImage.width / 2;
-    var halfHeight = alishImage.height / 2;
+    if (alishImage) {
+      var mouseX = event.pageX;
+      var mouseY = event.pageY;
+      var halfWidth = alishImage.width / 2;
+      var halfHeight = alishImage.height / 2;
 
-    // Position image based on mouse position
-    alishImage.style.left = mouseX - halfWidth + "px";
-    alishImage.style.top = mouseY - halfHeight + "px";
+      // Position image based on mouse position
+      alishImage.style.left = mouseX - halfWidth + "px";
+      alishImage.style.top = mouseY - halfHeight + "px";
+    }
   }
 
   // Add mousemove event listener to the document
-  document.addEventListener("mousemove", handleMouseMove);
+  if (alishImage) {
+    document.addEventListener("mousemove", handleMouseMove);
 
-  // Add click event listener to hide the image after first mouse interaction
-  document.addEventListener("click", hideImage);
+    // Add click event listener to hide the image after first mouse interaction
+    document.addEventListener("click", hideImage);
+  }
 
   // Check if the device is mobile and hide the image accordingly
   function checkDeviceType() {
-    const mobileDevice = window.matchMedia("(max-width: 768px)");
-    if (mobileDevice.matches) {
-      alishImage.style.display = "none";
-      // Remove mousemove event listener for mobile devices
-      document.removeEventListener("mousemove", handleMouseMove);
+    if (alishImage) {
+      const mobileDevice = window.matchMedia("(max-width: 768px)");
+      if (mobileDevice.matches) {
+        alishImage.style.display = "none";
+        // Remove mousemove event listener for mobile devices
+        document.removeEventListener("mousemove", handleMouseMove);
+      }
     }
   }
 
