@@ -1,22 +1,3 @@
-/* Reset default margin and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body styles */
-body {
-  background: url("/images/graphics/vector-curves.png") no-repeat center center
-    fixed;
-  background-size: cover; /* Adjust the image to cover the entire background */
-  width: 100%;
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-  background-color: #34230e;
-  color: goldenrod;
-  margin: 0;
-}
 
 /* Navigation Bar Styles */
 .nav {
@@ -124,7 +105,6 @@ body {
   background: url('/images/graphics/vector-curves.png') no-repeat center center fixed;
   background-size: cover;
   background-color: #34230e;
-  transition: ease .4s;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

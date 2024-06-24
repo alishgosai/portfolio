@@ -1,4 +1,64 @@
 
+// js for my navbar 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    navToggle.classList.toggle('active');
+
+    // Toggle between hamburger and cross icons
+    const isActive = navToggle.classList.contains('active');
+    if (isActive) {
+      navToggle.querySelector('.fa-bars').style.display = 'none';
+      navToggle.querySelector('.fa-times').style.display = 'block';
+    } else {
+      navToggle.querySelector('.fa-bars').style.display = 'block';
+      navToggle.querySelector('.fa-times').style.display = 'none';
+    }
+  });
+
+  // Close nav-links when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+      navLinks.classList.remove('show');
+      navToggle.classList.remove('active');
+      navToggle.querySelector('.fa-bars').style.display = 'block';
+      navToggle.querySelector('.fa-times').style.display = 'none';
+    }
+  });
+
+  // Close nav-links on window resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      navLinks.classList.remove('show');
+      navToggle.classList.remove('active');
+      navToggle.querySelector('.fa-bars').style.display = 'block';
+      navToggle.querySelector('.fa-times').style.display = 'none';
+    }
+  });
+
+  // Change nav background on scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.nav');
+    if (window.scrollY > 0) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+});
+
+// js for navbar ends here
+
+
+
+
+
+
+
 // for the mouse animaiton
 
 document.addEventListener("mousemove", function(event) {
