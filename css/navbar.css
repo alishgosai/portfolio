@@ -64,13 +64,14 @@
   text-wrap: nowrap;
   font-size: 1.2em;
   color: goldenrod;
-  padding: 10px;
-  border-radius: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
   background-color: #34230e;
   text-decoration: none;
   transition: color 0.5s ease;
   cursor: pointer;
 }
+
 
 .nav-connect a:hover {
   color: #34230e;

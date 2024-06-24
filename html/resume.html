@@ -1,30 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-   body, html {
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-            color: goldenrod;
-            background-color: #34230e; /* Set the background to black */
-        }
-  a{
-    text-decoration: none;
-    color: #34230e;
-    background-color: goldenrod;
-    padding: 5px;
-    border-radius: 18px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  </style>
+  <title>Resume - Alish Gosai</title>
+  <link rel="icon" href="images/logo-no-bg.png" type="image/x-icon">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- AOS library Animate on scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/resume.css">
 </head>
-<body>
-  <p>I am a ctrl c ctrl v programmer</p>
 
-  <a href="gradient-test.html">Gradient Test</a>
+<body>
+
+  <!-- Navbar for my portfolio -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html">
+          <img src="../images/logo-no-bg.png" alt="Logo" class="my-nav-logo">
+        </a>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../html/about.html">About</a></li>
+          <li><a href="../html/resume.html">Resume</a></li>
+          <li><a href="../html/projects.html">Projects</a></li>
+          <li><a href="../html/videos.html">videos</a></li>
+          <li><a href="../html/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-connect">
+        <a href="html/contact.html" target="_blank">
+          Let's Connect
+        </a>
+      </div>
+      <div class="nav-toggle">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times" style="display: none;"></i>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar ends here -->
+
+  <!-- Resume Content -->
+  <section id="contact" class="section-resume">
+    <h1 class="resume-title">Resume</h1>
+    <div class="resume-container">
+      <header class="resume-header" data-aos="fade-down">
+        <h1>Alish Gosai</h1>
+        <p>Web Developer | ASP.NET MVC Specialist</p>
+      </header>
+  
+      <div class="summary-skills-container">
+        <section class="resume-section summary-section" data-aos="fade-up">
+          <h2>Professional Summary</h2>
+          <p>Passionate web developer with 3+ years of experience in creating dynamic and responsive web applications using ASP.NET MVC, JavaScript, and various front-end technologies. Adept at problem-solving, continuously learning, and collaborating effectively in team environments.</p>
+        </section>
+  
+        <section class="resume-section skills-section" data-aos="fade-up">
+          <h2>Skills</h2>
+          <div class="skills-container">
+            <div class="skills-list">
+              <div class="skill">
+                <i class="fab fa-html5"></i>
+                <div class="progress">
+                  <div class="progress-bar" data-progress="90%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <i class="fab fa-css3-alt"></i>
+                <div class="progress">
+                  <div class="progress-bar" data-progress="85%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <i class="fab fa-js-square"></i>
+                <div class="progress">
+                  <div class="progress-bar" data-progress="80%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <i class="fab fa-python"></i>
+                <div class="progress">
+                  <div class="progress-bar" data-progress="75%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <i class="fab fa-react"></i>
+                <div class="progress">
+                  <div class="progress-bar" data-progress="70%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <i class="fab fa-node"></i>
+                <div class="progress">
+                  <div class="progress-bar" data-progress="65%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+  
+      <section class="resume-section experience-section" data-aos="fade-up">
+        <h2>Experience</h2>
+        <div class="experience-container">
+          <div class="experience-box">
+            <h3>Senior Web Developer</h3>
+            <p>ABC Company</p>
+            <p><i>Jan 2021 - Present</i></p>
+            <ul>
+              <li>Led a team of developers in designing and implementing complex web applications.</li>
+              <li>Implemented responsive design principles, enhancing user experience by 30%.</li>
+              <li>Deployed CI/CD pipelines, reducing deployment time by 40%.</li>
+            </ul>
+          </div>
+          <div class="experience-box">
+            <h3>Junior Web Developer</h3>
+            <p>XYZ Company</p>
+            <p><i>Jun 2018 - Dec 2020</i></p>
+            <ul>
+              <li>Developed front-end features and integrated APIs for scalable web applications.</li>
+              <li>Collaborated with cross-functional teams to troubleshoot and resolve critical bugs.</li>
+              <li>Implemented design patterns and improved code quality by 25%.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+  
+      <section class="resume-section education-section" data-aos="fade-up">
+        <h2>Education</h2>
+        <div class="education-container">
+          <div class="education-box">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p>University of Technology</p>
+            <p><i>2014 - 2018</i></p>
+          </div>
+          <div class="education-box">
+            <h3>Master of Science in Software Engineering</h3>
+            <p>University of Engineering</p>
+            <p><i>2019 - 2021</i></p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="resume-section certifications-section" data-aos="fade-up">
+        <h2>Certifications</h2>
+        <div class="certification-container">
+          <div class="certification-box">
+            <h3>Microsoft Certified: Azure Developer Associate</h3>
+            <p>Microsoft</p>
+            <p><i>Issued: July 2022</i></p>
+            <p>Developed expertise in Azure cloud technologies, including virtual machines, storage, and networking.</p>
+          </div>
+          <div class="certification-box">
+            <h3>Certified ScrumMaster (CSM)</h3>
+            <p>Scrum Alliance</p>
+            <p><i>Issued: April 2021</i></p>
+            <p>Gained proficiency in Scrum framework and Agile project management methodologies.</p>
+          </div>
+          <div class="certification-box">
+            <h3>Google Analytics Individual Qualification (GAIQ)</h3>
+            <p>Google</p>
+            <p><i>Issued: May 2020</i></p>
+            <p>Mastered Google Analytics tools and metrics to optimize website performance and marketing strategies.</p>
+          </div>
+          <div class="certification-box">
+            <h3>AWS Certified Solutions Architect - Associate</h3>
+            <p>Amazon Web Services</p>
+            <p><i>Issued: January 2019</i></p>
+            <p>Learned to design scalable and reliable AWS cloud architectures.</p>
+          </div>
+        </div>
+      </section>
+  
+    </div>
+  </section>
+  
+  <!-- End Resume Content -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../images/logo-no-bg.png" alt="Logo">
+          </a>
+        </div>
+        <div class="social-media">
+          <a href="https://www.facebook.com/alishgosai" target="_blank" class="facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/alishgosai/" target="_blank" class="linkedin"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/alishgosai" target="_blank" class="github"><i class="fab fa-github"></i></a>
+          <a href="https://www.youtube.com/c/ALISHGOSAI?sub_confirmation=1" target="_blank" class="youtube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="https://x.com/intent/follow?screen_name=alishgosai&followConfirm=true" target="_blank"
+            class="twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/alish___gosai/" target="_blank" class="instagram"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <p>&copy; 2024 Alish Gosai. All Rights Reserved</p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const skills = document.querySelectorAll('.skill');
+
+      // Function to check if an element is in viewport
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      // Function to animate skills when they scroll into view
+      function animateSkills() {
+        let delay = 0;
+        skills.forEach(skill => {
+          if (isInViewport(skill) && !skill.classList.contains('active')) {
+            setTimeout(() => {
+              skill.classList.add('active');
+              const progressBar = skill.querySelector('.progress-bar');
+              const progress = progressBar.dataset.progress;
+              progressBar.style.width = progress; // Set width based on data-progress attribute
+            }, delay);
+            delay += 200; // Adjust animation delay as needed
+          }
+        });
+      }
+
+      // Event listener for scrolling
+      window.addEventListener('scroll', animateSkills);
+
+      // Initial animation check on DOMContentLoaded
+      animateSkills();
+    });
+  </script>
 </body>
+
 </html>

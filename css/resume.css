@@ -1,0 +1,188 @@
+/* Section Resume Styles */
+.section-resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 80%; /* Set to 80% of the viewport width */
+  max-width: 900px; /* Maximum width of 900px */
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 100px 0; /* Adjust padding as needed */
+}
+
+.resume-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: goldenrod;
+}
+
+/* Resume Container Styles */
+.resume-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #34230e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.resume-header h1 {
+  font-size: 36px;
+  color: goldenrod;
+}
+
+.resume-header p {
+  font-size: 18px;
+  color: #daa520;
+}
+
+.resume-section {
+  margin-bottom: 20px;
+}
+
+.resume-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: goldenrod;
+}
+
+.resume-section p,
+.resume-section ul {
+  font-size: 16px;
+  color: #daa520;
+}
+
+.resume-section ul {
+  list-style: disc inside;
+  margin-left: 20px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill i {
+  font-size: 24px;
+  color: goldenrod;
+  margin-right: 10px;
+}
+
+.progress {
+  flex: 1;
+  background-color: #63310c;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: goldenrod;
+  width: 0;
+  transition: width 0.5s;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-box {
+  background-color: #63310c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.experience-box h3 {
+  font-size: 20px;
+  color: goldenrod;
+  margin-bottom: 5px;
+}
+
+.experience-box p {
+  font-size: 16px;
+  color: #daa520;
+}
+
+.experience-box ul {
+  list-style: disc inside;
+  margin-left: 20px;
+  color: #daa520;
+}
+
+@media (min-width: 768px) {
+  .experience-container {
+    flex-direction: column; /* Ensure experiences are stacked */
+  }
+
+  .experience-box {
+    width: 100%; /* Take full width on larger screens */
+  }
+}
+
+.education-container,
+.certification-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Align items with space between them */
+}
+
+.education-box,
+.certification-box {
+  flex-basis: calc(50% - 10px); /* Adjust as needed to fit two boxes per row */
+  background-color: #63310c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.education-box h3,
+.certification-box h3 {
+  font-size: 20px;
+  color: goldenrod;
+  margin-bottom: 5px;
+}
+
+.education-box p,
+.certification-box p {
+  font-size: 16px;
+  color: #daa520;
+}
+
+.education-box ul,
+.certification-box ul {
+  list-style: disc inside;
+  margin-left: 20px;
+  color: #daa520;
+}
+
+@media (min-width: 768px) {
+  .education-box,
+  .certification-box {
+    flex-basis: calc(50% - 10px); /* Adjust as needed to fit two boxes per row */
+  }
+}

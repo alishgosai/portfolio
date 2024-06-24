@@ -1,0 +1,209 @@
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #34230e;
+  color: goldenrod;
+}
+
+
+/* secrion channl */
+.section-channels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 80%; /* Set to 80% of the viewport width */
+  max-width: 900px; /* Maximum width of 900px */
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 100px 0; /* Adjust padding as needed */
+  background-color: #34230e; /* Background color */
+}
+
+.channel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%; /* Full width within the section */
+  max-width: 900px; /* Maximum width of 900px */
+  padding: 20px;
+  margin: 50, auto;
+}
+
+.channel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  background-color: #63310c; /* Different color for channel separation */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.channel-divider {
+  height: 20px; /* Space between channels */
+}
+
+.channel-logo img {
+  width: 80px; /* Adjust as needed */
+  height: 80px; /* Adjust as needed */
+  border-radius: 50%; /* Make the image circular */
+}
+
+.channel-details {
+  flex: 1; /* Take remaining space */
+  color: goldenrod; /* Text color */
+}
+
+.channel-info {
+  flex: 1; /* Take remaining space */
+}
+
+.channel-info h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.channel-info p {
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.subscribe-button {
+  margin-left: auto; /* Align button to right */
+}
+
+.subscribe-button button {
+  padding: 8px 12px;
+  font-size: 1em;
+  color: #34230e; /* Button text color */
+  background-color: goldenrod; /* Button background color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscribe-button button:hover {
+  background-color: #ffd700; /* Hover background color */
+  color: #34230e; /* Hover text color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section Videos Styles */
+.section-videos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%; /* Set to 100% of the viewport width */
+  max-width: 900px; /* Maximum width of 900px */
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 100px 20px; /* Adjust padding as needed */
+}
+
+.video-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: goldenrod;
+}
+
+/* Videos Container Styles */
+.videos-container {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 900px; /* Ensure videos container does not exceed 900px */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.videos-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video {
+  flex: 1 1 calc(50% - 10px); /* Two videos per row, each taking up half minus gap */
+  max-width: calc(50% - 10px); /* Adjusted width to maintain two videos per row */
+  background-color: #63310c;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.big-video {
+  flex: 2 1 100%; /* Larger width for one video, taking full width on smaller screens */
+  max-width: 100%; /* Ensures video doesn't exceed container */
+}
+
+.video iframe {
+  width: 100%; /* Ensures the iframe takes full width of its container */
+  max-width: 100%; /* Ensures the video iframe doesn't exceed its container */
+  height: 300px; /* Adjust height as needed */
+  border: none;
+  border-radius: 8px;
+}
+
+.video p {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .video {
+    flex-basis: calc(50% - 10px); /* Adjust width for two videos per row */
+  }
+
+  .big-video {
+    flex-basis: 100%; /* Full width for larger video on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .video {
+    flex-basis: calc(50% - 10px); /* Adjust width for two videos per row */
+  }
+
+  .big-video {
+    flex-basis: 100%; /* Full width for larger video on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .video {
+    flex-basis: 100%; /* Full width for all videos on extra small screens */
+  }
+}

@@ -1,32 +1,31 @@
-
 /* About section */
 #about {
   position: relative;
-  width: 100vw;
-  min-height: 100vh; /* Ensure the section takes at least the height of the viewport */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #34230e; /* Adjust as per your design */
-  background-position: center;
-  z-index: 4;
-  margin: 0 auto; /* Center the sections horizontally */
   padding: 100px 0;
 }
 
-/* About section */
 .section-about {
+  display: flex;
+  flex-direction: column;
   color: goldenrod;
   text-align: center;
-  width: 80%; /* Cover 80% of viewport width */
-  max-width: 1200px; /* Limit maximum width */
-  margin: 0 auto; /* Center the sections horizontally */
+  justify-content: center;
+  width: 80%; /* Set to 80% of viewport width */
+  max-width: 900px; /* Maximum width of 900px */
+  margin: 0 auto; /* Center the section horizontally */
   padding: 100px 0;
+}
+
+.about-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 .about-container {
- width: 80%;
-  margin: 0 auto;
+  margin: 50px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -35,10 +34,10 @@
 
 .about-box {
   flex: 1 1 400px; /* Flexbox properties for responsiveness */
-  background-color: transparent; /* Darker SaddleBrown */
+  background-color: #34230e; /* Adjusted darker brown color */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: left;
 }
 

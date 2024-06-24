@@ -1,25 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
+  <title>Alish Gosai</title>
+  <link rel="icon" href="images/logo-no-bg.png" type="image/x-icon">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!-- Styles -->
+   <!-- AOS library Animate on scroll -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+   <!-- Styles -->
+   <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/contact.css">
-  
 </head>
+
 <body>
+
+  <!-- Navbar for my portfolio -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html">
+          <img src="../images/logo-no-bg.png" alt="Logo" class="my-nav-logo">
+        </a>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../html/about.html">About</a></li>
+          <li><a href="../html/resume.html">Resume</a></li>
+          <li><a href="../html/projects.html">Projects</a></li>
+          <li><a href="../html/videos.html">Videos</a></li>
+          <li><a href="../html/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-connect">
+        <a href="html/contact.html" target="_blank">
+          Let's Connect
+        </a>
+      </div>
+      <div class="nav-toggle">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times" style="display: none;"></i>
+      </div>
+    </div>
+  </nav>
+
+<!-- navbar ends here -->
 
 <section id="contact" class="section-contact">
   <h1 class="contact-title">Contact Me</h1>
   <div class="contact-container">
       <div class="contact-info">
           <h2>Contact Information</h2>
-          <p><i class="fas fa-envelope"></i>  Email: <a href="mailto:alishgosai@gmail.com">alishgosai@gmail.com</a></p>
-          <p><i class="fas fa-phone"></i>  Phone: <a href="tel:+61450000000">+61 0450000000</a></p>
-          <p><i class="fas fa-map-marker-alt"></i>  Address: Hurstville, NSW, Australia</p>
+          <p  data-aos="fade-up"><i class="fas fa-envelope"></i>  Email: <a href="mailto:alishgosai@gmail.com">alishgosai@gmail.com</a></p>
+          <p  data-aos="fade-up"><i class="fas fa-phone"></i>  Phone: <a href="tel:+61450000000">+61 0450000000</a></p>
+          <p  data-aos="fade-up"><i class="fas fa-map-marker-alt"></i>  Address: Hurstville, NSW, Australia</p>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23400.157959814132!2d151.08648558174514!3d-33.962768756841996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b998bee6e1bd%3A0x5017d681632bb60!2sHurstville%20NSW%202220!5e0!3m2!1sen!2sau!4v1719136883049!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="contact-form">
@@ -43,6 +85,46 @@
   </div>
 </section>
 
+
+
+  <!-- footer startas here -->
+  <footer>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../images/logo-no-bg.png" alt="Logo">
+          </a>
+        </div>
+        <div class="social-media">
+          <a href="https://www.facebook.com/alishgosai" target="_blank" class="facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/alishgosai/" target="_blank" class="linkedin"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/alishgosai" target="_blank" class="github"><i class="fab fa-github"></i></a>
+          <a href="https://www.youtube.com/c/ALISHGOSAI?sub_confirmation=1" target="_blank" class="youtube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="https://x.com/intent/follow?screen_name=alishgosai&followConfirm=true" target="_blank"
+            class="twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/alish___gosai/" target="_blank" class="instagram"><i
+              class="fab fa-instagram"></i></a>
+
+
+        </div>
+      </div>
+      <p>&copy; 2024 Alish Gosai. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- footer ends here -->
+
+  <script src="../js/main.js"></script>
+  <!-- AOS JavaScript - Include the AOS library JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init();
+  </script>
 
 </body>
 </html>

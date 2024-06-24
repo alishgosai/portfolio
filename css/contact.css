@@ -1,21 +1,15 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  color: goldenrod;
-  background-color: #34230e;
-  height: 100%;
-}
 
-/* Contact Section Styles */
 
 .section-contact {
   display: flex;
-  flex-direction: column; /* Added to make the title and container stack vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 20px; /* Add some padding */
   box-sizing: border-box;
+  width: 80%; /* Set to 80% of the viewport width */
+  max-width: 900px; /* Maximum width of 900px */
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 100px 0; /* Adjust padding as needed */
 }
 
 .contact-title {
@@ -31,17 +25,18 @@ body, html {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
-  max-width: 1200px;
-  width: 80%;
-  background: transparent;
-  padding: 30px; /* Increase padding */
+  width: 100%; /* Set to 100% to occupy the full width within .section-contact */
+  max-width: 900px; /* Maximum width of 900px */
+  background: #34230e; /* Background color */
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for container */
+  margin: 50px auto; /* Center the container horizontally and add margin */
 }
 
 .contact-info, .contact-form {
   flex: 1 1 45%;
-  min-width: 300px;
+  min-width: 300px; /* Minimum width for better layout */
 }
 
 .contact-info h2, .contact-form h2 {
@@ -79,16 +74,23 @@ body, html {
 }
 
 input, textarea {
-  background-color: #34230e;
+  background-color: #34230e; /* Background color */
   color: goldenrod;
 }
 
 .contact-form input, .contact-form textarea {
-  margin-bottom: 20px; /* Increase margin between inputs */
+  margin-bottom: 20px;
   padding: 10px;
   font-size: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid goldenrod;
   border-radius: 5px;
+}
+
+/* Autofill styling */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #34230e inset !important; /* Background color */
+  -webkit-text-fill-color: goldenrod !important; /* Text color */
 }
 
 .contact-form button {
@@ -102,41 +104,42 @@ input, textarea {
 }
 
 .contact-form button:hover {
+  transition: color 0.5s;
   color: white;
 }
 
 @media (max-width: 768px) {
   .contact-container {
-    padding: 20px; /* Adjust padding for smaller screens */
+    padding: 20px;
   }
 
   .contact-title {
-    font-size: 2em; /* Decrease font size for smaller screens */
-    margin-bottom: 10px; /* Adjust margin for smaller screens */
+    font-size: 2em;
+    margin-bottom: 10px;
   }
 
   .contact-info, .contact-form {
     flex: 1 1 100%;
-    min-width: auto; /* Remove minimum width */
-    text-align: center; /* Center align text */
+    min-width: auto;
+    text-align: center;
   }
 
   .contact-info p {
-    font-size: 0.9em; /* Decrease font size */
-    margin: 5px 0; /* Adjust margins */
+    font-size: 0.9em;
+    margin: 5px 0;
   }
 
   .contact-info iframe {
-    height: 200px; /* Decrease iframe height */
+    height: 200px;
   }
 
   .contact-form input, .contact-form textarea {
-    padding: 8px; /* Adjust input and textarea padding */
-    font-size: 0.9em; /* Decrease font size */
+    padding: 8px;
+    font-size: 0.9em;
   }
 
   .contact-form button {
-    padding: 8px 12px; /* Adjust button padding */
-    font-size: 1em; /* Adjust font size */
+    padding: 8px 12px;
+    font-size: 1em;
   }
 }
