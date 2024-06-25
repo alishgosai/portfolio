@@ -1,6 +1,5 @@
-
 /* Sections styling */
-.section-projects{
+.section-projects {
   padding-top: 100px;
 }
 .section-projects,
@@ -10,7 +9,6 @@
   position: relative;
   width: 100%;
   min-height: 100vh; /* Ensure the section takes at least the height of the viewport */
-  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 4;
@@ -19,7 +17,7 @@
 
 .projects-container,
 .skills-container {
-  width: 80%; /* Cover 80% of viewport width */
+  width: 80%; /* Default width */
   max-width: 900px; /* Limit maximum width */
   justify-content: center;
   align-items: center;
@@ -28,7 +26,6 @@
   align-items: center;
   padding-bottom: 20px;
   margin: 0 auto; /* Center the sections horizontally */
- 
 }
 
 .projects-title {
@@ -37,14 +34,12 @@
   width: 100%;
   margin-bottom: 20px;
 }
+
 /* Project styling */
 .project {
   display: flex;
   margin: 50px auto;
-  /* background-color: #63310c; */
-  background-color: #34230e;
-  /* background-color: #1f1f1f;  */
-  /* Darker background for projects */
+  background-color: #34230e; /* Background color */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -93,7 +88,6 @@
   transform: translateY(0); /* Move up when active */
 }
 
-
 .skill:hover {
   transform: translateY(-5px); /* Hover effect */
 }
@@ -107,12 +101,7 @@
   width: 100%;
   height: 10px;
   border-radius: 8px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); 
+  background-color: rgba(255, 255, 255, 0.2); 
   /* Transparent white for progress bar background */
   margin: 10px 0;
 }
@@ -121,14 +110,11 @@
   height: 100%;
   background-color: goldenrod; /* Goldenrod color for progress bars */
   border-radius: 8px;
-  width: var(
-    --progress,
-    0
-  ); 
+  width: var(--progress, 0); 
   /* Initial width set to 0, will be updated via JS */
-  /* width: 0; */
-  transition: width .5s;
+  transition: width 0.5s;
 }
+
 .projects-container a {
   color: goldenrod;
   text-decoration: underline; /* Remove underline */
@@ -141,11 +127,7 @@
   text-decoration: underline; /* Underline on hover */
 }
 
-
-
 /* Skills section styling */
-
-
 .skills-container {
   text-align: center;
 }
@@ -164,6 +146,11 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .projects-container,
+  .skills-container {
+    width: 90%; /* Set to 90% of the viewport width for tablets and mobile */
+  }
+
   .project {
     flex-direction: column;
   }

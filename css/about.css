@@ -66,3 +66,14 @@
 .about-box ul li a:hover {
   color: #ffd700; /* Lighter golden color for hover effect */
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-container {
+    width: 90%; /* Set to 90% of the viewport width for tablets and mobile */
+  }
+
+  .about-box {
+    flex: 1 1 100%; /* Full width for each box */
+  }
+}
