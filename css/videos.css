@@ -10,13 +10,20 @@
   padding: 100px 0; /* Adjust padding as needed */
 }
 
+.video-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: goldenrod;
+}
+
 
 
 /* Channel Section */
-.channel-container, .videos-container {
+.section-channels, .videos-container {
   width: 80%; /* Set to 100% of the parent (videos-section) width */
   max-width: 900px; /* Maximum width of 900px */
-  margin: 0 auto; /* Center the section horizontally */
 }
 
 
@@ -45,6 +52,7 @@
 }
 
 .channel-info {
+  align-items: center;
   width: 60%;
   display: flex; /* Take remaining space */
   gap: 20px;
@@ -94,14 +102,6 @@
 /* Video Section */
 
 
-.video-title {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  text-align: center;
-  width: 100%;
-  color: goldenrod;
-}
-
 
 .big-video {
   flex: 2 1 100%; /* Larger width for one video, taking full width on smaller screens */
@@ -109,18 +109,22 @@
   height: 100%; /* Ensures video doesn't exceed container */
   background-color: transparent;
   border-radius: 8px;
+ margin-top: 40px;
+ margin-bottom: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .big-video iframe {
   width: 100%;
   height: 460px;
+  max-width: 100%; /* Ensures the video iframe doesn't exceed its container */
+  border: none;
 }
 
-.big-video p {
-  margin-top: 10px;
+.big-video p, .video p {
+  padding: 10px;
   font-size: 16px;
-  text-align: center;
+  text-align: left;
 }
 
 .videos-row {
@@ -140,7 +144,7 @@
 .video iframe {
   width: 100%; /* Ensures the iframe takes full width of its container */
   max-width: 100%; /* Ensures the video iframe doesn't exceed its container */
-  height: 300px; /* Adjust height as needed */
+  height: 240px; /* Adjust height as needed */
   border: none;
 }
 
