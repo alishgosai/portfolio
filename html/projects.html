@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- AOS library Animate on scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <!-- Styles -->
    <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/styles.css">
@@ -39,7 +41,7 @@
         </ul>
       </div>
       <div class="nav-connect">
-        <a href="html/contact.html" target="_blank">
+        <a href="../html/contact.html">
           Let's Connect
         </a>
       </div>
@@ -53,7 +55,7 @@
 <!-- navbar ends here -->
 
 <section id="projects" class="section-projects">
-  <h1 class="projects-title">My Projects</h1>
+  <h1 class="projects-title" data-aos="zoom-out-down" data-aos-once="true">My Projects</h1>
   <div class="projects-container">
     
 
@@ -211,6 +213,12 @@
 
 
 <script src="../js/main.js"></script>
+<!-- AOS JavaScript - Include the AOS library JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init();
+</script>
  <!-- Custom script for animation -->
  <script>document.addEventListener('DOMContentLoaded', function() {
    // Function to check if an element is in viewport

@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 100%; /* Set to 80% of the viewport width */
+  width: 100%; /* Set to 100% of the viewport width */
   margin: 0 auto; /* Center the section horizontally */
   padding: 100px 0; /* Adjust padding as needed */
 }
@@ -18,14 +18,15 @@
   color: goldenrod;
 }
 
-
-
 /* Channel Section */
 .section-channels, .videos-container {
-  width: 80%; /* Set to 100% of the parent (videos-section) width */
+  width: 80%; /* Set to 80% of the parent (videos-section) width */
   max-width: 900px; /* Maximum width of 900px */
 }
 
+.section-channels {
+  margin: 20px 0;
+}
 
 .channel {
   display: flex;
@@ -97,20 +98,15 @@
   color: #34230e; /* Hover text color */
 }
 
-
-
 /* Video Section */
-
-
-
 .big-video {
   flex: 2 1 100%; /* Larger width for one video, taking full width on smaller screens */
   max-width: 100%;
   height: 100%; /* Ensures video doesn't exceed container */
   background-color: transparent;
   border-radius: 8px;
- margin-top: 40px;
- margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -148,29 +144,114 @@
   border: none;
 }
 
-/* Responsive design */
+
+
+/* Responsive design *//* Responsive design */
 @media (max-width: 1024px) {
   .video {
-    flex-basis: calc(50% - 10px); /* Adjust width for two videos per row */
+    flex-basis: 100%; /* Full width for all videos on smaller screens */
   }
 
   .big-video {
     flex-basis: 100%; /* Full width for larger video on smaller screens */
+  }
+
+  .channel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .company-logo {
+    display: none; /* Hide company logo */
+  }
+
+  .channel-logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .channel-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subscribe-button {
+    width: 100%;
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
   .video {
-    flex-basis: calc(50% - 10px); /* Adjust width for two videos per row */
+    flex-basis: 100%; /* Full width for all videos on smaller screens */
   }
 
   .big-video {
     flex-basis: 100%; /* Full width for larger video on smaller screens */
   }
+
+  .channel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .company-logo {
+    display: none; /* Hide company logo */
+  }
+
+  .channel-logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .channel-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subscribe-button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
   .video {
-    flex-basis: 100%; /* Full width for all videos on extra small screens */
+    flex-basis: 100%; /* Full width for all videos on smaller screens */
+  }
+
+  .videos-row {
+    flex-direction: column;
+  }
+
+  .big-video {
+    flex-basis: 100%; /* Full width for larger video on smaller screens */
+  }
+
+  .channel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .company-logo {
+    display: none; /* Hide company logo */
+  }
+
+  .channel-logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .channel-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subscribe-button {
+    width: 100%;
+    text-align: center;
   }
 }
