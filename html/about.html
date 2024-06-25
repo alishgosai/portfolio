@@ -15,7 +15,7 @@
   <!-- AOS library Animate on scroll -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <!-- Styles -->
-   <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/about.css">
 </head>
@@ -52,11 +52,11 @@
     </div>
   </nav>
 
-<!-- navbar ends here -->
+  <!-- navbar ends here -->
 
-   <!-- about section setart here -->
+  <!-- about section setart here -->
 
-   <section id="about" class="section-about">
+  <section id="about" class="section-about">
     <h1 class="about-title" data-aos="zoom-out-down" data-aos-once="true">About Me</h1>
     <div class="about-container">
       <div class="about-box" data-aos="fade-up">
@@ -138,7 +138,20 @@
   <!-- footer ends here -->
 
 
-  <script src="../js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Smooth scroll to about section
+      document
+        .querySelector(".scroll-down")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const aboutPage = document.querySelector("#about");
+          const aboutPageTop = aboutPage.offsetTop;
+          window.scrollTo({ top: aboutPageTop, behavior: "smooth" });
+        });
+    });
+  </script>
   <!-- AOS JavaScript - Include the AOS library JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
@@ -147,4 +160,5 @@
   </script>
 
 </body>
+
 </html>
