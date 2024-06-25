@@ -5,9 +5,10 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 90%; /* Set to 90% of the viewport width */
+  width: 100%; /* Set to 90% of the viewport width */
   margin: 0 auto; /* Center the section horizontally */
   padding: 100px 0; /* Adjust padding as needed */
+  overflow-x: hidden;
 }
 
 .video-title {
@@ -20,8 +21,15 @@
 
 /* Channel Section */
 .section-channels, .videos-container {
-  width: 80%; /* Set to 80% of the parent (videos-section) width */
+  width: 90%; /* Set to 80% of the parent (videos-section) width */
   max-width: 900px; /* Maximum width of 900px */
+}
+
+.videos-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden; /* Add this to prevent overflow issues */
 }
 
 .section-channels {
@@ -137,10 +145,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+
 .video iframe {
-  width: 100%; /* Ensures the iframe takes full width of its container */
-  max-width: 100%; /* Ensures the video iframe doesn't exceed its container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto; /* Ensure videos adjust height based on width */
+  max-width: 100%;
+  aspect-ratio: 16/9; /* Maintain aspect ratio */
   border: none;
 }
 
@@ -167,31 +177,6 @@
     height: 260px; /* Adjust height for smaller screens */
   }
 
-  .channel {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .company-logo {
-    display: none; /* Hide company logo */
-  }
-
-  .channel-logo {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .channel-info {
-    width: 100%;
-    text-align: center;
-  }
-
-  .subscribe-button {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px; /* Add space between elements */
-  }
 }
 
 @media (max-width: 768px) {
@@ -235,11 +220,45 @@
     flex-direction: column;
     gap: 20px; /* Ensure gap between video elements */
   }
+  
+  .channel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-logo {
+    display: none; /* Hide company logo */
+  }
+
+  .channel-logo {
+    width: 30%;
+    text-align: center;
+  }
+
+  .channel-info {
+    width: 80%;
+    text-align: left;
+  }
+
+  .subscribe-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
+  .subscribe-button button {
+    padding: 8px 30%;
+    font-size: 1em;
+    color: #34230e; /* Button text color */
+    background-color: goldenrod; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 480px) {
   .section-videos, .section-channels, .videos-container {
-    width: 90%; /* Keep width to 90% of viewport on small screens */
+    width: 95%; /* Keep width to 90% of viewport on small screens */
   }
 
   .video {
@@ -252,11 +271,18 @@
   }
 
   .big-video {
-    flex-basis: 100%; /* Full width for larger video on smaller screens */
+    flex: 1 1 100%; /* Full width for larger video on smaller screens */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto; /* Adjust to auto height */
   }
 
   .big-video iframe {
-    height: 300px; /* Adjust height for smaller screens */
+    width: 100%;
+    height: auto; /* Ensures the video iframe doesn't exceed its container */
+    max-width: 100%;
+    aspect-ratio: 16/9; /* Maintain aspect ratio */
+    border: none;
   }
 
   .channel {
@@ -269,19 +295,34 @@
   }
 
   .channel-logo {
-    width: 100%;
+    width: 35%;
     text-align: center;
     margin-bottom: 10px;
   }
 
   .channel-info {
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .subscribe-button {
     width: 100%;
     text-align: center;
     margin-top: 10px; /* Add space between elements */
+  }
+
+  .subscribe-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
+  .subscribe-button button {
+    padding: 8px 30%;
+    font-size: 1em;
+    color: #34230e; /* Button text color */
+    background-color: goldenrod; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
 }
