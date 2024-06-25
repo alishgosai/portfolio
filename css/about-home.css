@@ -2,9 +2,7 @@
 #about {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 0;
+  background-color: #34230e;
 }
 
 .section-about {
@@ -13,9 +11,15 @@
   color: goldenrod;
   text-align: center;
   justify-content: center;
+  align-items: center;
   margin: 0 auto; /* Center the section horizontally */
-  padding: 100px 0;
+  padding: 50px 0;
+  background: url('../images/ag-vector-curves.png') no-repeat center center fixed ;
+  background-size: cover;
+  box-shadow: 0 0 15px rgb(45, 22, 4);
+  z-index: 4;
 }
+
 
 .about-title {
   font-size: 2.5em;
