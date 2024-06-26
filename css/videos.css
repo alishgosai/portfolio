@@ -180,7 +180,10 @@
 }
 
 @media (max-width: 768px) {
-  .section-videos, .section-channels, .videos-container {
+  .section-videos {
+    width: 100%;
+  }
+  .section-channels, .videos-container {
     width: 90%; /* Keep width to 90% of viewport on smaller screens */
   }
 
@@ -216,6 +219,12 @@
     border: none;
   }
 
+  .video p{
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+  }
   .videos-row {
     flex-direction: column;
     gap: 20px; /* Ensure gap between video elements */
@@ -257,8 +266,11 @@
 }
 
 @media (max-width: 480px) {
-  .section-videos, .section-channels, .videos-container {
-    width: 95%; /* Keep width to 90% of viewport on small screens */
+  .section-videos {
+    width: 100%;
+  }
+  .section-channels, .videos-container {
+    width: 90%; /* Keep width to 90% of viewport on smaller screens */
   }
 
   .video {
