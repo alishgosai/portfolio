@@ -20,10 +20,11 @@
 }
 
 /* Channel Section */
-.section-channels, .videos-container {
-  width: 90%; /* Set to 80% of the parent (videos-section) width */
-  max-width: 900px; /* Maximum width of 900px */
+.channel-container{
+  width: 100%; /* Set to 80% of the parent (videos-section) width */
+  max-width: 900px; 
 }
+
 
 .videos-container {
   width: 90%;
@@ -183,8 +184,11 @@
   .section-videos {
     width: 100%;
   }
-  .section-channels, .videos-container {
+  .section-channels {
     width: 90%; /* Keep width to 90% of viewport on smaller screens */
+  }
+  .videos-container{
+    width: 90%;
   }
 
   .big-video {

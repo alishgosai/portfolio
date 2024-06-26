@@ -6,6 +6,8 @@
   width: 100%;
   background-color: transparent;
   transition: background-color 0.1s ease;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1000;
 }
 
@@ -129,6 +131,12 @@
 }
 
 /* Responsive Styles */
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  .nav-connect{
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 420px) and (max-width: 768px) {
   .nav-container {
     flex-direction: row;
