@@ -46,7 +46,7 @@
 }
 
 .project img {
-  width: 40%;
+  width: 50%;
   object-fit: cover;
 }
 
@@ -114,6 +114,7 @@
   /* Initial width set to 0, will be updated via JS */
   transition: width 0.5s;
 }
+
 
 .projects-container a {
   color: goldenrod;

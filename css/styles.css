@@ -201,6 +201,28 @@ body {
   }
 }
 
+
+/* demo video section  */
+.demo-video {
+  text-align: center;
+  width: 100%;
+}
+.demo-video h1{
+  margin: 20px;
+}
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.video-container video {
+  max-width: 900px;
+  width: 90%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+
 /* footer styles here */
 footer {
   position: absolute;
