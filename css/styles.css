@@ -247,6 +247,22 @@ body {
   width: 100%;
   height: 460px; /* Maintain aspect ratio */
 }
+@media (max-width:768px){
+  .demo-video {
+    text-align: center;
+    width: 100%;
+  }
+  .video-container{
+    width: 100%;
+  }
+  .video-container .video {
+    align-items: center;
+    max-width: 900px;
+    width: 90%;
+    height: 260px; /* Maintain aspect ratio */
+    aspect-ratio: 16 9;
+  }
+}
 
 
 /* footer styles here */
