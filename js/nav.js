@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
+  const currentPath = window.location.pathname;
 
   // Navbar toggle functionality
   navToggle.addEventListener("click", function () {
@@ -15,6 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       navToggle.querySelector(".fa-bars").style.display = "block";
       navToggle.querySelector(".fa-times").style.display = "none";
+    }
+  });
+
+  // Highlight active nav link
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
     }
   });
 
