@@ -49,11 +49,37 @@ body {
   z-index: -1;
 } */
 
+/* the bottom gradient is for image for pages except home */
+.click-anywhere{
+  color: #34230e;
+  font-size: 1rem;
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%; /* Set to 90% of the viewport width */
+  margin: 0 auto; /* Center the section horizontally */
+  overflow-x: hidden;
+  padding-top: 0;
+}
+
+#alish-gradient{
+  width: 30%;
+  position: absolute;
+  pointer-events: none; /* Make sure the image doesn't interfere with mouse events */
+  z-index: -1; /* Behind everything */
+  opacity: 1; /* Adjust the opacity of the image */
+  transition: left 0.1s, top 0.1s; /* Smooth transition effect */
+  overflow: hidden;
+
+}
 #alish-image {
   width: 5%;
   position: absolute;
   pointer-events: none; /* Make sure the image doesn't interfere with mouse events */
-  z-index: 1; /* Behind everything */
+  z-index: 0; /* Behind everything */
   opacity: 200; /* Adjust the opacity of the image */
   transition: left 0.1s, top 0.1s; /* Smooth transition effect */
 }
