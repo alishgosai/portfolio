@@ -56,3 +56,57 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+// Function to display ASCII art logo and message
+function displayLogoAndMessage() {
+  // ASCII art for "AG"
+  const logo = `
+                                                                   
+                                                                   
+                                                                   
+                                                                   
+                                                                   
+                                                                   
+                                                                   
+                                                                   
+                         A             AAAAA                       
+                        AA        AAAAAAAAAAAAAAA                  
+                       AAAA    AAAAAAAAAAAAAAAAAAAAA               
+                      AAAAA  AAAAAAAAAAAAAAAAAAAAAAAAA             
+                     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA             
+                    AAAAAAAA AAAAAAAA         AAAAAA               
+                    AAAAAAAAAAAAAAA              AA                
+                   AAAAAAAAAA AAA                                  
+                  AAAAAAAAAAA AA                                   
+                 AAAAAAAA AAAA A          AAAAAAAAAAAAAAAA         
+                AAAAAAAA  AAAA            AAAAAAAAAAAAAAAA         
+               AAAAAAAAA   AAAA           AAAAAAAAAAAAAAAA         
+              AAAAAAAAA     AAA           AAAAAAAAAAAAAAAA         
+             AAAAAAAAAAAAAAAAAAA A                AAAAAAAA         
+             AAAAAAAAAAAAAAAAAAA AAAA           AAAAAAAAA          
+            AAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAA           
+           AAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAA            
+          AAAAAAAA              AA AAAAAAAAAAAAAAAAAA              
+         AAAAAAAAA               A AAAAAAAAAAAAAAAA                
+         AAAAAAAA                    AAAAAAAAAA                    
+                                                                   
+                                                                   
+                                                                   
+                                                                   
+                                                                   
+                                                                   
+                                                                   
+                                                                   
+  `;
+
+  // Message about Alish Gosai
+  const message = "Hi, I'm Alish Gosai, a passionate web developer with a knack for creating interactive and engaging web experiences.";
+
+  // Display logo and message in the console
+  console.log(logo);
+  console.log(message);
+}
+
+// Call the function to display the logo and message
+displayLogoAndMessage();
