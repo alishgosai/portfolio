@@ -8,7 +8,7 @@
   transition: background-color 0.1s ease;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+  z-index: 100000;
 }
 
 .nav-container {
@@ -61,7 +61,6 @@
   color: white; /* Highlighted color */
 }
 
-
 .nav-links a:hover {
   color: white; /* Color on hover */
 }
@@ -93,7 +92,7 @@
 }
 
 .nav-toggle .fa-bars {
-  display: block; 
+  display: block;
 }
 
 .nav-toggle .fa-times {
@@ -120,7 +119,7 @@
 .nav.scrolled .nav-links a {
   color: goldenrod;
 }
-.nav.scrolled .nav-links a.home-active{
+.nav.scrolled .nav-links a.home-active {
   color: white;
 }
 .nav.scrolled .nav-links a.active {
@@ -194,11 +193,12 @@
     font-weight: 700;
     color: white;
   }
-  .nav-links a.home-active{
+  .nav-links a.home-active {
     color: white;
     font-weight: 700;
   }
-  .nav.scrolled .nav-links a.home-active, .nav-links a.active{
+  .nav.scrolled .nav-links a.home-active,
+  .nav-links a.active {
     font-weight: 700;
   }
 
@@ -215,7 +215,6 @@
     background-color: goldenrod;
     cursor: pointer;
     margin-top: 0;
-    
   }
 
   /* Overlay effect to show make transparent outer parts*/
@@ -241,6 +240,9 @@
 }
 
 @media only screen and (min-width: 1px) and (max-width: 420px) {
+  .nav{
+    display: none;
+  }
   .nav-container {
     flex-direction: row;
     align-items: center;
@@ -263,7 +265,7 @@
     top: 76px;
     left: 0;
     padding: 10px;
- 
+
     box-shadow: 0 2px 4px rgba(0, 0, 1, 0.5);
     z-index: 999;
   }
@@ -293,5 +295,188 @@
 
   .nav-connect a {
     display: none;
+  }
+}
+
+
+
+
+/* Mobile screen navbar like a mobile app */
+.navbar-width {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0; /* Position the navbar at the top */
+  height: 80px;
+  background: url("../images/ag-vector-curves.png") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #34230e;
+  z-index: 10000;
+}
+
+.navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: auto;
+  /* box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); Adjust shadow direction */
+  
+}
+
+.navbar.scrolled {
+  background-size: cover;
+  background-color: #34230e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow direction */
+}
+
+.navbar a, .navbar .hamburger {
+  color: goldenrod;
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar a .icon, .navbar .hamburger .icon {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* CSS for active navbar link */
+.navbar a.active, .hamburger-menu a.active {
+  color: white; /* Change text color for active link */
+  border-bottom: 2px solid goldenrod; /* Add underline for active link */
+  font-weight: bold; /* Optional: make active link bold */
+}
+
+.navbar img {
+  display: block;
+  margin-bottom: 3px;
+  width: 20px; /* Desired width */
+  height: 20px; /* Desired height */
+  object-fit: cover; /* Crop the image to fit the container */
+  object-position: center; /* Center the image in the container */
+  transform: scale(1.5); /* Adjust the scale to zoom in */
+  transform-origin: center;
+}
+
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 80px; /* Just above the navbar height */
+  right: 0;
+  width: 100%; /* Set the width to 50% */
+  background: url("../images/ag-vector-curves.png") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #34230e;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Adjust shadow direction */
+  padding: 10px 0;
+  z-index: 9999; /* Ensure it is below the navbar */
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.hamburger-menu.open {
+  transform: translateX(0);
+}
+
+.hamburger-menu a {
+  color: goldenrod;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger-menu a:hover {
+  color: white;
+  background-color: #ea7141;
+}
+
+.hamburger {
+  color: goldenrod;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger.rotate .icon {
+  animation: rotateIcon 0.3s ease-out forwards;
+}
+
+.hamburger.rotate-back .icon {
+  animation: rotateIconBack 0.3s ease-out forwards;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.326); /* Semi-transparent black */
+  backdrop-filter: blur(3px); /* Blur effect */
+  z-index: 9997; /* Below the hamburger menu */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateIconBack {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 420px) {
+  .navbar {
+    display: none;
+    z-index: 0;
   }
 }

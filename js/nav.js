@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  
   // Close nav-links when clicking outside
   document.addEventListener("click", function (e) {
     if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
@@ -56,6 +57,61 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+
+
+//function for the mobile screeen navbar
+let lastScrollTop = 0;
+window.addEventListener('scroll', function() {
+    const secondaryNavbar = document.querySelector('.secondary-navbar');
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > lastScrollTop) {
+        secondaryNavbar.classList.remove('visible'); // Scroll down
+    } else {
+        secondaryNavbar.classList.add('visible'); // Scroll up
+    }
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+});
+
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 0) {
+      navbar.classList.add('scrolled');
+  } else {
+      navbar.classList.remove('scrolled');
+  }
+});
+
+function toggleMenu() {
+  const menu = document.getElementById('hamburger-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const hamburgerText = document.getElementById('hamburger-text');
+  const hamburger = document.getElementById('hamburger');
+  const overlay = document.getElementById('overlay');
+
+  if (menu.classList.contains('open')) {
+    menu.classList.remove('open');
+    menu.style.transform = 'translateX(100%)'; // Slide out to the right
+    hamburgerIcon.classList.remove('fa-times');
+    hamburgerIcon.classList.add('fa-bars');
+    hamburger.classList.remove('rotate');
+    hamburger.classList.add('rotate-back');
+    hamburgerText.textContent = 'More';
+    overlay.classList.remove('visible'); // Hide overlay
+  } else {
+    menu.classList.add('open');
+    menu.style.transform = 'translateX(0)'; // Slide in from the right
+    hamburgerIcon.classList.remove('fa-bars');
+    hamburgerIcon.classList.add('fa-times');
+    hamburger.classList.remove('rotate-back');
+    hamburger.classList.add('rotate');
+    hamburgerText.textContent = 'Close';
+    overlay.classList.add('visible'); // Show overlay
+  }
+}
+
 
 
 // Function to display ASCII art logo and message

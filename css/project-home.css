@@ -1,0 +1,124 @@
+/* Section styling */
+.section-projects {
+  padding-top: 100px;
+}
+
+.projects-container {
+  width: 80%; /* Default width */
+  max-width: 900px; /* Limit maximum width */
+  margin: 0 auto; /* Center the sections horizontally */
+  padding-bottom: 20px;
+}
+
+/* Title styling */
+.projects-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Project styling */
+.project {
+  display: flex;
+  margin: 50px auto;
+  background-color: #34230e; /* Background color */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.project img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.project-details {
+  padding: 20px;
+  flex: 1;
+}
+
+.project-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: goldenrod; /* Goldenrod color for titles */
+}
+
+.project-description {
+  margin-bottom: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  flex: 0 0 calc(50% - 10px);
+  background-color: rgba(255, 255, 255, 0.1); 
+  /* Transparent white background */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill i {
+  font-size: 24px; /* Adjust icon size */
+  color: goldenrod; /* Goldenrod color for icons */
+  margin-right: 10px;
+}
+
+.skill img, .skill svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2); 
+  /* Transparent white for progress bar background */
+  margin: 10px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: goldenrod; /* Goldenrod color for progress bars */
+  border-radius: 8px;
+  width: var(--progress, 0); 
+  /* Initial width set to 0, will be updated via JS */
+  transition: width 0.5s;
+}
+
+.projects-container a {
+  color: goldenrod;
+  text-decoration: none; /* Remove underline */
+}
+
+.projects-container a:hover {
+  color: #ffd700; /* Lighter shade of goldenrod on hover */
+  font-weight: bold; /* Increase font weight on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .projects-container {
+    width: 90%; /* Set to 90% of the viewport width for tablets and mobile */
+  }
+
+  .project {
+    flex-direction: column;
+  }
+
+  .project img {
+    width: 100%;
+    height: auto;
+  }
+
+  .skill {
+    flex: 0 0 100%;
+  }
+}
