@@ -27,7 +27,7 @@
 
   <div class="navbar-width">
   <div class="navbar">
-    <a href="index.html">
+    <a href="index.html" class="home-active">
       <img src="images/logo-no-bg.png" alt="">
         <!-- <i class="fas fa-home icon"></i> -->
         <span>Home</span>
@@ -52,10 +52,11 @@
 </div>
 
 <div class="hamburger-menu" id="hamburger-menu">
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="html/about.html">About</a>
     <a href="html/resume.html">Resume</a>
     <a href="html/projects.html">Projects</a>
+    <a href="projects/javascriptFor100Days/index.html">100 Js Projects</a>
     <a href="html/videos.html">Videos</a>
     <a href="html/contact.html">Contact</a>
     <a href="index.html">More</a>
@@ -164,12 +165,11 @@
     <!-- demmo video seciton -->
     <section class="demo-video">
       <section id="projects" class="section-projects">
-        <h1 class="projects-title" data-aos="zoom-out-down" data-aos-once="true">My Projects</h1>
+        <h1 class="projects-title">My Projects</h1>
         <div class="projects-container">
           
-      
           <!-- Project 1 -->
-          <div class="project"  data-aos="fade-up">
+          <div class="project">
             <img src="images/alish-cover1.png" alt="Project 1 Image">
             <div class="project-details">
               <h2 class="project-title">Personal Website</h2>
@@ -210,7 +210,7 @@
           <!-- Repeat for Project 2 to Project 6 -->
       
           <!-- Project 2 -->
-          <div class="project"  data-aos="fade-up">
+          <div class="project">
             <img src="images/projects-images/Screenshot 2024-05-28 012354.png" alt="Project 2 Image">
             <div class="project-details">
               <h2 class="project-title">MVC Web Application</h2>
@@ -282,7 +282,7 @@
 
   <!-- contact section starts herws -->
   <section id="contact" class="section-contact">
-    <h1 class="contact-title" data-aos="zoom-out-down" data-aos-once="true">Contact Me</h1>
+    <h1 class="contact-title">Contact Me</h1>
     <div class="contact-container" data-aos="fade-up" data-aos-once="true">
       <div class="contact-info">
         <h2>Get in Touch</h2>
@@ -311,7 +311,7 @@
           <label for="message">Message:</label>
           <textarea id="message" name="message" rows="4" required></textarea>
 
-          <button type="submit" data-aos="zoom-in" data-aos-once="true">Send Message</button>
+          <button type="submit">Send Message</button>
         </form>
 
         <div id="thank-you" style="display: none;">

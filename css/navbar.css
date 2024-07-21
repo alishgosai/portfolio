@@ -352,11 +352,17 @@
 }
 
 /* CSS for active navbar link */
-.navbar a.active, .hamburger-menu a.active {
-  color: white; /* Change text color for active link */
-  border-bottom: 2px solid goldenrod; /* Add underline for active link */
-  font-weight: bold; /* Optional: make active link bold */
+.navbar a.active {
+  color: white; /* Change text color for active link */ 
 }
+
+.hamburger-menu a.active{
+  color:white;
+}
+
+/* .navbar.scrolled a.home-active {
+  color: white;
+} */
 
 .navbar img {
   display: block;

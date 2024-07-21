@@ -23,6 +23,46 @@
 
 <body>
 
+<!-- navbar for mobile -->
+<div class="navbar-width">
+  <div class="navbar">
+    <a href="../index.html">
+      <img src="../images/logo-no-bg.png" alt="">
+      <!-- <i class="fas fa-home icon"></i> -->
+      <span>Home</span>
+    </a>
+    <a href="../html/about.html">
+      <i class="fas fa-user icon"></i>
+      <span>About</span>
+    </a>
+    <a href="../html/projects.html">
+      <i class="fas fa-briefcase icon"></i>
+      <span>Projects</span>
+    </a>
+    <a href="../html/contact.html">
+      <i class="fas fa-envelope icon"></i>
+      <span>Contact</span>
+    </a>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars icon" id="hamburger-icon"></i>
+      <span id="hamburger-text" style="font-size: 12px;">More</span>
+    </div>
+  </div>
+</div>
+
+<div class="hamburger-menu" id="hamburger-menu">
+  <a href="../index.html">Home</a>
+  <a href="../html/about.html">About</a>
+  <a href="../html/resume.html" class="active">Resume</a>
+  <a href="../html/projects.html">Projects</a>
+  <a href="../html/videos.html">Videos</a>
+  <a href="../html/contact.html">Contact</a>
+  <a href="../index.html">More</a>
+</div>
+<!-- overlay -->
+<div id="overlay" class="overlay"></div>
+
+
   <!-- Navbar for my portfolio -->
   <nav class="nav">
     <div class="nav-container">

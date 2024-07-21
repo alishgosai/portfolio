@@ -64,25 +64,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //function for the mobile screeen navbar
 let lastScrollTop = 0;
-window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function() {
     const secondaryNavbar = document.querySelector('.secondary-navbar');
     const st = window.pageYOffset || document.documentElement.scrollTop;
-    if (st > lastScrollTop) {
+    if (secondaryNavbar) {
+      if (st > lastScrollTop) {
         secondaryNavbar.classList.remove('visible'); // Scroll down
-    } else {
+      } else {
         secondaryNavbar.classList.add('visible'); // Scroll up
+      }
+      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
     }
-    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-});
+  });
 
-window.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 0) {
-      navbar.classList.add('scrolled');
-  } else {
-      navbar.classList.remove('scrolled');
-  }
-});
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+  });
 
 function toggleMenu() {
   const menu = document.getElementById('hamburger-menu');
