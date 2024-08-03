@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
   // Scroll animation for home section
   document.addEventListener("scroll", function () {
     const homeSection = document.querySelector("#home .cover-image");
@@ -7,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Adjust the speed by changing the divisor value
     homeSection.style.transform = `translateY(${scrollPosition / 1.5}px)`;
   });
-
 
   // Scroll animation for arrow box of home section
   document.addEventListener("scroll", function () {
@@ -17,6 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
     homeSection.style.transform = `translateY(${scrollPosition / 2}px)`;
   });
 
+  document.addEventListener("scroll", function () {
+    const homeSection = document.querySelector(".repository-button");
+    const scrollPosition = window.scrollY;
+    // Adjust the speed by changing the divisor value
+    homeSection.style.transform = `translateY(${scrollPosition / 2}px)`;
+  });
 
   // Smooth scroll to about section
   document
@@ -28,4 +32,3 @@ document.addEventListener("DOMContentLoaded", function () {
       window.scrollTo({ top: aboutPageTop, behavior: "smooth" });
     });
 });
-
