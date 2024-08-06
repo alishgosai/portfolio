@@ -37,6 +37,16 @@
   flex: 1;
 }
 
+.project-details p {
+  text-align: left;
+}
+
+@media (width: 768px) {
+  .project-details p {
+    text-align: center;
+  }
+}
+
 .project-title {
   font-size: 24px;
   margin-bottom: 10px;
@@ -195,9 +205,7 @@
 .exercise-overlay:hover span {
   display: block;
   pointer-events: none; /* Ensure text does not block click events */
-
 }
-
 
 /* iFrame styling */
 .exercise-content iframe {
